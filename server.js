@@ -16,12 +16,12 @@ const app = express();
 const intro = 'Hello! Operator 6O at your serve. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. You can also do some more stuff with it! Type HELP for the command you can issue!';
 
 const theaterIds = [
-  {'All': 1029},
-  {'Helsinki': 1002},
-  {'Espoo': 1012},
-  {'Vantaa': 1013},
-  {'Pori': 1019},
-  {'Tampere': 1021}
+  {'All': '1029'},
+  {'Helsinki': '1002'},
+  {'Espoo': '1012'},
+  {'Vantaa': '1013'},
+  {'Pori': '1019'},
+  {'Tampere': '1021'}
 ];
 
 const baseUrl = 'http://www.finnkino.fi/XML/';
@@ -29,9 +29,9 @@ const urlSchedules = 'Schedule';
 const urlEvents = 'Events';
 const urlDates = 'ScheduleDates';
 
-// flag checks
+// flag checks & modifiable stuff
 let saidHello = false;
-let areaCode = '';
+let areaCode = '1002';
 
 const token = "<PAGE_ACCESS_TOKEN>";
 
@@ -124,16 +124,16 @@ function sendEventList(sender) {
     json: true,
     qs: {
       listType: 'ComingSoon',
-      area: areaCode.length == 4 ? areaCode : 1002,
+      area: areaCode.length == 4 ? areaCode : '1002',
       nrOfDays: 14
     }
   }).then(function(body) {
     const result = body;
     let resultJSON = xmlParser.toJson(result);
-    // let events = resultJSON.Events.Event;
+    let events = resultJSON.Events;
     console.log('result json', resultJSON);
     console.log('- - -  - - - - ');
-    // console.log('result events: ', events);
+    console.log('result events: ', events);
   }, function (error) {
     messageData.text = `Couldn't find the price of that item.`;
   })
