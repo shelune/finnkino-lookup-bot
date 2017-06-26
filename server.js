@@ -129,9 +129,11 @@ function sendEventList(sender) {
     }
   }).then(function(body) {
     const result = body;
-    let resultJSON = xmlParser.toJson(result);
+    let resultJSON = xmlParser.toJson(result, {
+      object: true
+    });
     let events = resultJSON.Events;
-    console.log('result json', resultJSON);
+    console.log('result json: ', resultJSON);
     console.log('- - -  - - - - ');
     console.log('result events: ', events);
   }, function (error) {
