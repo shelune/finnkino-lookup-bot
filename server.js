@@ -12,7 +12,7 @@ const request = require('request-promise');
 const app = express();
 
 // Const
-const intro = 'Helllo! Finnkino Lookup at your serve. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. You can also do some more stuff with it! Type HELP for the command you can issue!';
+const intro = 'Hello! Operator 6O at your serve. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. You can also do some more stuff with it! Type HELP for the command you can issue!';
 
 // flag checks
 let saidHello = false;
@@ -79,7 +79,7 @@ function sayHello(sender) {
 function sendTextMessage(sender, text) {
     let messageData = {text: text}
     request({
-	    url: 'https://graph.facebook.com/v2.8/me/messages',
+	    url: 'https://graph.facebook.com/v2.6/me/messages',
 	    qs: {access_token: token},
 	    method: 'POST',
   		json: {
