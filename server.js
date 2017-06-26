@@ -143,38 +143,7 @@ function sendEventList(sender) {
   })
   //send the result message with prices
   .finally(function () {
-    itemName = '';
-    let messagePriceData = {
-      'attachment': {
-        'type': 'template',
-        'payload': {
-          'template_type': 'button',
-          'text': `The price will be listed below, along with the link to detailed item view. \n --- --- --- \n ${price}`,
-          'buttons': [
-            {
-             'type': 'web_url',
-             'url': itemUrl,
-             'title': 'Check on Steam'
-            }
-          ]
-        }
-      }
-    }
-    request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
-        method: 'POST',
-        json: {
-            recipient: {id:sender},
-            message: messagePriceData,
-        }
-    }, function(error, response, body) {
-        if (error) {
-            console.log('Error sending messages: ', error)
-        } else if (response.body.error) {
-            console.log('Error: ', response.body.error)
-        }
-    });
+    sendTextMessage(sender, 'Operator 6O out.')
   });
 }
 
