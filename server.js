@@ -66,10 +66,10 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
           let text = event.message.text
           if (saidHello) {
-            sendTextMessage(sender, "Echoing: " + text);
-
             if (_.includes(_.toLower(text), 'browse')) {
               sendEventList(sender);
+            } else {
+              sendTextMessage(sender, 'Operator 6O does not understand this.')
             }
           } else {
             sayHello(sender);
