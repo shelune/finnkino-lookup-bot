@@ -1,6 +1,7 @@
 'use strict'
 
-//EAAILAOmIWYwBAO4VKlcuPUje5gOZC22U9G5RKnllyZBZAMWuAZB0PUtWS9c1FXwtML92ALFgKjRYVvRFR1y34Bkmc0ZBYuHa91TZBV669Es8TimwZAmu2t8keMcfPabJNokjE96r3O2MZBmquo0P4nuZBVhFZCeVvxZBj5Qt4nVRyBzkAZDZD
+// Token Generated
+//EAAEIHve3uJsBAFsPJzqM9sqeYK3ehMj47SPEdEgun0w8aKe9cfz1LgIftFNyEhQ7gTQsCarMzZCOLhGRnlqvaTYJQFGshAvSTWsn9YDIghuPR6TkAEvBxYxVYfI3psvfgZAfKQy06cTwkBICmmkMKPIL7nQgF0dOTi5G8gmwZDZD
 
 const qs = require('qs');
 const _ = require('lodash');
@@ -41,51 +42,31 @@ app.post('/webhook/', function (req, res) {
         let sender = event.sender.id;
         // check first hero name
         if (event.message && event.message.text) {
-          let secretMesg = detectLA(event.message.text);
-          console.log(secretMesg);
-          if (secretMesg != '') {
-            sendTextMessage(sender, secretMesg);
-          } else {
-            let text = event.message.text.toLowerCase().trim();
-            foundItem = false;
-
-            if (saidHello) {
-              // iterate through item list and assign item key
-              _.forIn(arcanaList, (value, key) => {
-                if (key == text.toLowerCase().trim()) {
-                  itemName = value;
-                  foundItem = true;
-                }
-              });
-
-              if (!foundItem) {
-                sendTextMessage(sender, `No such record found. You can type in one of these commands. \n ${joinWords(arcanaList).toUpperCase()}`);
-              } else {
-                if (currencySet) {
-                  sendPrice(sender, currency, itemName);
-                } else {
-                  askCurrency(sender);
-                  continue;
-                }
-              }
-
-              if (detectPhrase(text, 'currency', true)) {
-                askCurrency(sender);
-              }
-            } else {
-              sayHello(sender, intro);
-            }
-          }
-
-        } else if (event.postback && event.postback.payload) {
-          currency = event.postback.payload;
-          if (itemName.length > 0) {
-            sendPrice(sender, currency, itemName);
-          }
+          let text = event.message.text
+          sendTextMessage(sender, "Echoing: " + text);
         }
     }
     res.sendStatus(200);
 });
+
+function sendTextMessage(sender, text) {
+    let messageData = {text: text}
+    request({
+	    url: 'https://graph.facebook.com/v2.8/me/messages',
+	    qs: {access_token: token},
+	    method: 'POST',
+  		json: {
+  		  recipient: {id: sender},
+  			message: messageData,
+  		}
+	}, function(error, response, body) {
+		if (error) {
+		  console.log('Error sending messages: ', error)
+		} else if (response.body.error) {
+		  console.log('Error: ', response.body.error)
+	  }
+  })
+}
 
 // Spin up the servurrr!
 app.listen(app.get('port'), function() {
