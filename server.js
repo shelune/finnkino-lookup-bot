@@ -67,6 +67,10 @@ app.post('/webhook/', function (req, res) {
           let text = event.message.text
           if (saidHello) {
             sendTextMessage(sender, "Echoing: " + text);
+
+            if (_.includes(_.toLower(text), 'browse')) {
+              sendEventList(sender);
+            }
           } else {
             sayHello(sender);
           }
@@ -119,16 +123,18 @@ function sendEventList(sender) {
     json: true,
     qs: {
       listType: 'ComingSoon',
-      area: areaCode.length == 4 ? areaCode : 1002
+      area: areaCode.length == 4 ? areaCode : 1002,
+      nrOfDays: 14
     }
   }).then(function(body) {
     const result = body;
     if (result.lowest_price || result.lowest_price.length == 0) {
-      price = `${itemName} \n Lowest Price: ${result.lowest_price}`;
-      itemUrl = itemUrl + _.replace(JSON.stringify(itemName), /"/g, '');
-      console.log(JSON.stringify(itemUrl))
+      let resultJSON = xmlParser.toJson(result);
+      let events = resultJSON.Events.Event;
+      console.log('result json', resultJSON);
+      console.log('- - -  - - - - ');
+      console.log('result events: ', events);
       // console.log(qs.stringify(itemName))
-      console.log(messageData);
     } else {
       messageData.text = `Couldn't find the price of that item.`;
     }
