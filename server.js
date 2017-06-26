@@ -130,10 +130,10 @@ function sendEventList(sender) {
   }).then(function(body) {
     const result = body;
     let resultJSON = xmlParser.toJson(result);
-    let events = resultJSON.Events.Event;
+    // let events = resultJSON.Events.Event;
     console.log('result json', resultJSON);
     console.log('- - -  - - - - ');
-    console.log('result events: ', events);
+    // console.log('result events: ', events);
   }, function (error) {
     messageData.text = `Couldn't find the price of that item.`;
   })
