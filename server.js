@@ -132,7 +132,7 @@ function sendEventList(sender) {
     let resultJSON = xmlParser.toJson(result, {
       object: true
     });
-    let events = resultJSON.Events;
+    let events = resultJSON.Events.Event;
     console.log('result json: ', resultJSON);
     console.log('- - -  - - - - ');
     console.log('result events: ', events);
