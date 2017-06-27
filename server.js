@@ -32,8 +32,34 @@ const urlSchedules = 'Schedule';
 const urlEvents = 'Events';
 const urlDates = 'ScheduleDates';
 
+const commandCenter = {
+  'help': function(sender) {
+    let messageData = {text: commandFind};
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+        method: 'POST',
+        json: {
+            recipient: {id: sender},
+            message: messageData,
+        }
+    }).then(function (body) {
+      sendTextMessage(sender, commandBrowse);
+    }, function (err) {
+      console.log('error encountered', err);
+    });
+  },
+  'browse': function(sender) {
+
+  },
+  'find': function(sender) {
+
+  }
+}
+
 // flag checks & modifiable stuff
 let saidHello = false;
+let commandFound = false;
 let areaCode = '1002';
 
 const token = "<PAGE_ACCESS_TOKEN>";
@@ -69,14 +95,19 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
           let text = event.message.text
           if (saidHello) {
-            if (_.includes(_.toLower(text), 'help')) {
-              sendHelp(sender);
-            }
+            const processedText = _.toLower(_.trim(text));
+            const availableCommands = _.keys(commandCenter);
+            _.map(availableCommands, function (command) {
+              if (processedText.includes(command)) {
+                commandCenter[`${command}`](sender);
+                commandFound = true;
+              }
+            });
 
-            if (_.includes(_.toLower(text), 'browse')) {
-              sendEventList(sender);
+            if (!commandFound) {
+              sendTextMessage(sender, 'Operator 6O does not understand this.');
             } else {
-              sendTextMessage(sender, 'Operator 6O does not understand this.')
+              commandFound = false;
             }
           } else {
             sayHello(sender);
