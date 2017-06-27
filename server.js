@@ -210,6 +210,11 @@ function sendHelp(sender) {
 
 function sendMovieSchedule(sender, name) {
   let event = findMovie(name);
+  if (event) {
+    sendTextMessage(sender, 'Found event with ', name);
+  } else {
+    sendTextMessage(sender, 'No event found with ', name);
+  }
   console.log('event found: ', event);
 }
 
@@ -232,14 +237,15 @@ function findMovie(name) {
       object: true
     });
     let events = resultJSON.Events.Event;
-    console.log('COMING SOON EVENTS FINDING: ', events);
     resultEvent = _.find(events, function (event) {
-      return _.includes(event.Title, name);
+      console.log('COMING EVENTS TITLES: ', event.Title);
+      return _.includes(event.Title, 'Spider');
     })
-
+    /*
     if (resultEvent) {
       return resultEvent;
     } else {
+
       request.get({
         uri: urlEvents,
         baseUrl: baseUrl,
@@ -257,7 +263,9 @@ function findMovie(name) {
           return _.includes(event.Title, name);
         })
       })
+
     }
+    */
 
     console.log(`... Requested to find: ${name} ...`);
     console.log(`Result: ${resultEvent}`);
