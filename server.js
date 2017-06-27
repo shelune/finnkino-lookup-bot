@@ -209,24 +209,6 @@ function sendHelp(sender) {
   });
 }
 
-function askMovieName(sender) {
-  request({
-      url: 'https://graph.facebook.com/v2.6/me/messages',
-      qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
-      method: 'POST',
-      json: {
-          recipient: {id:sender},
-          message: 'currencyData',
-      }
-  }).then(function (body) {
-    // confirm currency used
-    console.log(body);
-    currencySet = true
-  }, function (err) {
-    console.log('error encountered', err);
-  });
-}
-
 function sendMovieSchedule(sender, name) {
   let event = findMovie(name);
   console.log('event found: ', event);
@@ -234,7 +216,7 @@ function sendMovieSchedule(sender, name) {
 
 function findMovie(name) {
   let movieFound = false;
-  let result = null;
+  let resultEvent = null;
 
   request.get({
     uri: urlEvents,
@@ -251,12 +233,13 @@ function findMovie(name) {
       object: true
     });
     let events = resultJSON.Events.Event;
-    result = _.find(events, function (event) {
+
+    resultEvent = _.find(events, function (event) {
       return _.includes(event.Title, name);
     })
 
-    if (result) {
-      return result;
+    if (resultEvent) {
+      return resultEvent;
     } else {
       request.get({
         uri: urlEvents,
@@ -271,14 +254,15 @@ function findMovie(name) {
           object: true
         });
         let events = resultJSON.Events.Event;
-        let result = _.find(events, function (event) {
+        resultEvent = _.find(events, function (event) {
           return _.includes(event.Title, name);
         })
       })
     }
-    console.log('- - -  - - - - ');
 
-    return result;
+    console.log('... found movie or not, reporting ...')
+
+    return resultEvent;
   }, function (error) {
     messageData.text = `Couldn't find the price of that item.`;
   })
