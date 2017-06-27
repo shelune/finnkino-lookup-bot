@@ -152,9 +152,16 @@ function sendEventList(sender) {
 }
 
 function sendHelp(sender) {
-  sendTextMessage(sender, commandFind);
+  let messageData = {text: commandFind};
+  request({
+      url: 'https://graph.facebook.com/v2.6/me/messages',
+      qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+      method: 'POST',
+      json: {
+          recipient: {id: sender},
+          message: messageData,
+      }
   }).then(function (body) {
-    saidHello = true
     sendTextMessage(sender, commandBrowse);
   }, function (err) {
     console.log('error encountered', err);
