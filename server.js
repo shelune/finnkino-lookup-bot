@@ -53,14 +53,15 @@ const commandCenter = {
 
   },
   'find': function(sender) {
-
+    console.log('command mode chosen - find');
   }
 }
 
 // flag checks & modifiable stuff
 let saidHello = false;
-let commandFound = false;
+let commandMode = '';
 let areaCode = '1002';
+let movieNameRequest = '';
 
 const token = "<PAGE_ACCESS_TOKEN>";
 
@@ -93,21 +94,30 @@ app.post('/webhook/', function (req, res) {
         let sender = event.sender.id;
         // check first hero name
         if (event.message && event.message.text) {
-          let text = event.message.text
+          let text = event.message.text;
+
+          if (commandMode == 'find') {
+            movieNameRequest = _.trim(_.toLower(text));
+
+            if (movieNameRequest) {
+              sendMovieSchedule(sender, movieNameRequest);
+            } else {
+              sendTextMessage(sender, 'Operator 6O requires your movie name.');
+            }
+          }
+
           if (saidHello) {
             const processedText = _.toLower(_.trim(text));
             const availableCommands = _.keys(commandCenter);
             _.map(availableCommands, function (command) {
               if (processedText.includes(command)) {
                 commandCenter[`${command}`](sender);
-                commandFound = true;
+                commandMode = command;
               }
             });
 
-            if (!commandFound) {
+            if (!commandMode) {
               sendTextMessage(sender, 'Operator 6O does not understand this.');
-            } else {
-              commandFound = false;
             }
           } else {
             sayHello(sender);
@@ -197,6 +207,81 @@ function sendHelp(sender) {
   }, function (err) {
     console.log('error encountered', err);
   });
+}
+
+function askMovieName(sender) {
+  request({
+      url: 'https://graph.facebook.com/v2.6/me/messages',
+      qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+      method: 'POST',
+      json: {
+          recipient: {id:sender},
+          message: 'currencyData',
+      }
+  }).then(function (body) {
+    // confirm currency used
+    console.log(body);
+    currencySet = true
+  }, function (err) {
+    console.log('error encountered', err);
+  });
+}
+
+function sendMovieSchedule(sender, name) {
+  let event = findMovie(name);
+  console.log('event found: ', event);
+}
+
+function findMovie(name) {
+  let movieFound = false;
+  let result = null;
+
+  request.get({
+    uri: urlEvents,
+    baseUrl: baseUrl,
+    json: true,
+    qs: {
+      listType: 'ComingSoon',
+      area: areaCode.length == 4 ? areaCode : '1002',
+      nrOfDays: 14
+    }
+  }).then(function(body) {
+    const result = body;
+    let resultJSON = xmlParser.toJson(result, {
+      object: true
+    });
+    let events = resultJSON.Events.Event;
+    result = _.find(events, function (event) {
+      return _.includes(event.Title, name);
+    })
+
+    if (result) {
+      return result;
+    } else {
+      request.get({
+        uri: urlEvents,
+        baseUrl: baseUrl,
+        json: true,
+        qs: {
+          area: areaCode.length == 4 ? areaCode : '1002',
+        }
+      }).then(function(body) {
+        const result = body;
+        let resultJSON = xmlParser.toJson(result, {
+          object: true
+        });
+        let events = resultJSON.Events.Event;
+        let result = _.find(events, function (event) {
+          return _.includes(event.Title, name);
+        })
+      })
+    }
+    console.log('- - -  - - - - ');
+
+    return result;
+  }, function (error) {
+    messageData.text = `Couldn't find the price of that item.`;
+  })
 }
 
 // Spin up the servurrr!
