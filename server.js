@@ -133,9 +133,10 @@ function sendEventList(sender) {
       object: true
     });
     let events = resultJSON.Events.Event;
-    console.log('result json: ', resultJSON);
+    // console.log('result json: ', resultJSON);
     console.log('- - -  - - - - ');
-    console.log('result events: ', events);
+    console.log('result events array? ', Array.isArray(events));
+    console.log('result events length: ', events.length);
   }, function (error) {
     messageData.text = `Couldn't find the price of that item.`;
   })
