@@ -54,6 +54,7 @@ const commandCenter = {
   },
   'find': function(sender) {
     console.log('command mode chosen - find');
+    sendTextMessage(sender, 'Operator 6O requires your movie name.');
   }
 }
 
@@ -101,8 +102,6 @@ app.post('/webhook/', function (req, res) {
 
             if (movieNameRequest) {
               sendMovieSchedule(sender, movieNameRequest);
-            } else {
-              sendTextMessage(sender, 'Operator 6O requires your movie name.');
             }
           }
 
@@ -233,7 +232,7 @@ function findMovie(name) {
       object: true
     });
     let events = resultJSON.Events.Event;
-
+    console.log('COMING SOON EVENTS FINDING: ', events);
     resultEvent = _.find(events, function (event) {
       return _.includes(event.Title, name);
     })
