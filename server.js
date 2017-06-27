@@ -13,7 +13,10 @@ const request = require('request-promise');
 const app = express();
 
 // Const stuff
-const intro = 'Hello! Operator 6O at your serve. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. You can also do some more stuff with it! Type HELP for the command you can issue!';
+const intro = 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. You can also do some more stuff with it! Type "HELP" for the command you can issue!';
+const commandFind = `The first command you can type is FIND (lower or uppercase is just fine). I'll prompt you a question on the name of the movie (in English) & which cinema area you go to. Hopefully I can return the movie you want with its event link & date.`;
+const commandBrowse = `Then you can type BROWSE. I'll introduce a list of events available for you within 3 weeks. Then you can find with the provided name. Neat!`
+
 
 const theaterIds = [
   {'All': '1029'},
@@ -66,6 +69,10 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
           let text = event.message.text
           if (saidHello) {
+            if (_.includes(_.toLower(text), 'help')) {
+              sendHelp(sender);
+            }
+
             if (_.includes(_.toLower(text), 'browse')) {
               sendEventList(sender);
             } else {
@@ -135,14 +142,22 @@ function sendEventList(sender) {
     let events = resultJSON.Events.Event;
     // console.log('result json: ', resultJSON);
     console.log('- - -  - - - - ');
-    console.log('result events array? ', Array.isArray(events));
-    console.log('result events length: ', events.length);
   }, function (error) {
     messageData.text = `Couldn't find the price of that item.`;
   })
   //send the result message with prices
   .finally(function () {
     sendTextMessage(sender, 'Operator 6O out.')
+  });
+}
+
+function sendHelp(sender) {
+  sendTextMessage(sender, commandFind);
+  }).then(function (body) {
+    saidHello = true
+    sendTextMessage(sender, commandBrowse);
+  }, function (err) {
+    console.log('error encountered', err);
   });
 }
 
