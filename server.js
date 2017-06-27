@@ -259,7 +259,8 @@ function findMovie(name) {
       })
     }
 
-    console.log('... found movie or not, reporting ...')
+    console.log('... found movie or not, reporting ...');
+    console.log(resultEvent);
 
     return resultEvent;
   }, function (error) {
