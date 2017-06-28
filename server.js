@@ -250,7 +250,7 @@ function searchComingSoon(name) {
       object: true
     });
     const events = resultJSON.Events.Event;
-    const matchedEvents = _.find(events, function (event) {
+    const matchedEvents = _.filter(events, function (event) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     });
 
