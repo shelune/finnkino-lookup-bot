@@ -206,9 +206,7 @@ function findMovie(sender, name) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     })
 
-    if (resultEvent) {
-      return resultEvent;
-    } else {
+    if (!resultEvent) {
       request.get({
         uri: urlEvents,
         baseUrl: baseUrl,
@@ -223,10 +221,12 @@ function findMovie(sender, name) {
         });
         let events = resultJSON.Events.Event;
         resultEvent = _.find(events, function (event) {
+          console.log('NOW IN THEATER TITLES: ', event.Title);
           return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
         })
       })
     }
+
     console.log(`... Requested to find: ${name} ...`);
 
   }, function (error) {

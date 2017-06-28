@@ -1,937 +1,1226 @@
 {
-    "Events": {
-        "-xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
-        "-xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
-        "Event": [{
-                "ID": "302284",
-                "Title": "American Valhalla",
-                "OriginalTitle": "American Valhalla",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "81",
-                "dtLocalRelease": "2017-08-17T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "More2Screen",
-                "GlobalDistributorName": "More2Screen",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Dokumentti, Musiikki, Event cinema",
-                "ShortSynopsis": "American Valhalla tells the story of an extraordinary musical collaboration between two mavericks of American rock: Iggy Pop and Queens of the Stone Age front-man, Joshua Homme, who along with Andreas Neumann co-directed the film. The result was one of the best albums of 2016: Iggy’s \"Post Pop Depression\".",
-                "Synopsis": "American Valhalla tells the story of an extraordinary musical collaboration between two mavericks of American rock: Iggy Pop and Queens of the Stone Age front-man, Joshua Homme, who along with Andreas Neumann co-directed the film. The result was one of the best albums of 2016: Iggy’s \"Post Pop Depression\". The film takes you on a journey from the conception of this musical partnership and the first demos recorded in Californian desert by - what became - the Post Pop Depression band that included Dean Fertita (QOTSA) and drummer Matt Helders (Arctic Monkeys), and onto the release of the album, proceeded by a sold-out American and European Tour that featured the epic performance at the Royal Albert Hall in London. American Valhalla is a crown jewel of this once-in-a-life-time kind of a project. Featuring stunning cinematography, insightful interviews and access all areas footage, the film reveals just what is means to know that if you risk nothing, you gain nothing, no matter who you are.",
-                "EventURL": "http://www.finnkino.fi/Event/302284/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_micro/AmericanValhalla_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_small/AmericanValhalla_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_medium/AmericanValhalla_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_small/AmericanValhalla_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11629/landscape_small/AmericanValhalla_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11629/landscape_large/AmericanValhalla_670.jpg"
-                },
-                "Cast": {
-                    "Actor": [{
-                            "FirstName": "Iggy",
-                            "LastName": "Pop"
-                        },
-                        {
-                            "FirstName": "Joshua",
-                            "LastName": "Homme"
-                        }
-                    ]
-                },
-                "Directors": {
-                    "Director": [{
-                            "FirstName": "Andreas",
-                            "LastName": "Neumann"
-                        },
-                        {
-                            "FirstName": "Joshua",
-                            "LastName": "Homme"
-                        }
-                    ]
-                }
+   "Event": [
+      {
+         "ID": "302284",
+         "Title": "American Valhalla",
+         "OriginalTitle": "American Valhalla",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "81",
+         "dtLocalRelease": "2017-08-17T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "More2Screen",
+         "GlobalDistributorName": "More2Screen",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Dokumentti, Musiikki, Event cinema",
+         "ShortSynopsis": "American Valhalla tells the story of an extraordinary musical collaboration between two mavericks of American rock: Iggy Pop and Queens of the Stone Age front-man, Joshua Homme, who along with Andreas Neumann co-directed the film. The result was one of the best albums of 2016: Iggy’s \"Post Pop Depression\".",
+         "Synopsis": "American Valhalla tells the story of an extraordinary musical collaboration between two mavericks of American rock: Iggy Pop and Queens of the Stone Age front-man, Joshua Homme, who along with Andreas Neumann co-directed the film. The result was one of the best albums of 2016: Iggy’s \"Post Pop Depression\". The film takes you on a journey from the conception of this musical partnership and the first demos recorded in Californian desert by - what became - the Post Pop Depression band that included Dean Fertita (QOTSA) and drummer Matt Helders (Arctic Monkeys), and onto the release of the album, proceeded by a sold-out American and European Tour that featured the epic performance at the Royal Albert Hall in London. American Valhalla is a crown jewel of this once-in-a-life-time kind of a project. Featuring stunning cinematography, insightful interviews and access all areas footage, the film reveals just what is means to know that if you risk nothing, you gain nothing, no matter who you are.",
+         "EventURL": "http://www.finnkino.fi/Event/302284/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_micro/AmericanValhalla_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_small/AmericanValhalla_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_medium/AmericanValhalla_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11629/portrait_small/AmericanValhalla_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11629/landscape_small/AmericanValhalla_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11629/landscape_large/AmericanValhalla_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [
+            {
+               "FirstName": "Iggy",
+               "LastName": "Pop"
             },
             {
-                "ID": "302268",
-                "Title": "David Gilmour Live at Pompeii",
-                "OriginalTitle": "David Gilmour Live at Pompeii",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "120",
-                "dtLocalRelease": "2017-09-13T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "StoryHill Oy",
-                "GlobalDistributorName": "StoryHill Oy",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Konsertti, Event cinema",
-                "ShortSynopsis": "Pink Floydin keulakuva David Gilmour palaa 45 vuoden jälkeen Pompejin legendaariseen amfiteatteriin. Nyt kyseessä on kuitenkin ensimmäinen kerta, kun antiikin Rooman aikaisessa amfiteatterissa on myös yleisöä: vain 2600 fania pääsi kokemaan konsertin samoilla jalansijoilla, joissa gladiaattorit ovat taistelleet vuosituhannen alussa.",
-                "Synopsis": "Pink Floydin keulakuva David Gilmour palaa 45 vuoden jälkeen Pompejin legendaariseen amfiteatteriin. Nyt kyseessä on kuitenkin ensimmäinen kerta, kun antiikin Rooman aikaisessa amfiteatterissa on myös yleisöä: vain 2600 fania pääsi kokemaan konsertin samoilla jalansijoilla, joissa gladiaattorit ovat taistelleet vuosituhannen alussa. Kyseessä on ”Rattle That Lock” -kiertueen kaksi vaikuttavaa konserttia.
-
-                David Gilmour Live at Pompeii on spektaakkeli.Se on visuaalisesti näyttävä lasereiden,
-                pyrotekniikan sekä valtavan kokoisen pyöreän screenin ansiosta.Tältä jättinäytöltä nähdään konserttia varten luotuja ja musiikkia täydentäviä filmejä.Ennen kaikkea käsillä on upea musiikkikonsertti yhdessä huippumuusikkojen kanssa.
-
-                Esityksessä kuullaan niin Pink Floydin klassikkoja kuin kappaleita David Gilmourin soolouralta.Yksi erikoisuuksista on One of These Days,
-                jonka Pink Floyd esitti Pompejin konserttitaltioinnissaan vuonna 1971. Konsertin muita erityisyyksiä on mm.The Dark Side of the Moon - levyn The Great Gig in the Sky - kappale,
-                jota Gilmour on harvoin sooloartistina soittanut.Lisäksi kuullaan kappaleita kahdelta uusimmalta albumilta,
-                Rattle That Lock ja On an Island sekä muita Gilmourin soolouran ja Pink Floydin klassikkoja,
-                kuten Wish You Were Here ja Comfortably Numb.Tämä konserttiesitys pitää sisällään huippukohdat molemmista amfiteatterissa koetuista keikoista.Ohjauksesta vastaa Gavin Elder.
-
-                Konsertissa nähdään musiikkimaailman huippuartisti,
-                joka esittää ainutlaatuisissa puitteissa upeaa musiikkituotantoa yhdessä maailmanluokan yhtyeen kanssa.David Gilmour Live at Pompeii - konsertit saivat ylistäviä arvioita niin faneilta kuin kriitikoilta,
-                mm.The Guardian - lehti antoi täydet 5 tähteä.
-
-                Esitykset vain yhtenä iltana,
-                keskiviikkona 13.9.klo 20.00,
-                Finnkinon teattereissa Helsingissä(Tennispalatsi),
-                Espoossa(Sello),
-                Vantaalla,
-                Jyväskylässä,
-                Kuopiossa,
-                Lahdessa,
-                Lappeenrannassa(Strand),
-                Oulussa,
-                Porissa,
-                Tampereella(Plevna) ja Turussa.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302268/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_micro/DavidGilmour_LiveAtPompeii_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_small/DavidGilmour_LiveAtPompeii_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_medium/DavidGilmour_LiveAtPompeii_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_small/DavidGilmour_LiveAtPompeii_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11613/landscape_small/DavidGilmour_LiveAtPompeii_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11613/landscape_large/DavidGilmour_LiveAtPompeii_670.jpg"
-                },
-                "Directors": {
-                    "Director": {
-                        "FirstName": "Gavin",
-                        "LastName": "Elder"
-                    }
-                }
-            },
-            {
-                "ID": "302269",
-                "Title": "Fame",
-                "OriginalTitle": "Fame",
-                "ProductionYear": "1980",
-                "LengthInMinutes": "134",
-                "dtLocalRelease": "2017-07-26T00:00:00",
-                "Rating": "12",
-                "RatingLabel": "12",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_12.png",
-                "LocalDistributorName": "Park Circus Limited",
-                "GlobalDistributorName": "Park Circus Limited",
-                "ProductionCompanies": "-",
-                "EventType": "Movie",
-                "Genres": "Draama, Musiikki, Event cinema",
-                "ShortSynopsis": "A chronicle of the lives of several teenagers who attend a New York high school for students gifted in the performing arts. Elokuva on englanninkielinen; ei tekstitystä.",
-                "Synopsis": "Kesäklassikko keskiviikkona 26.7.! Alkuperäinen Fame-elokuva vuodelta 1980.
-
-                A chronicle of the lives of several teenagers who attend a New York high school
-                for students gifted in the performing arts.
-
-                Elokuva on englanninkielinen;ei tekstitystä.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302269/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_micro/Fame_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_small/Fame_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_medium/Fame_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_small/Fame_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11614/landscape_small/Fame_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11614/landscape_large/Fame_670.jpg"
-                },
-                "Cast": {
-                    "Actor": [{
-                            "FirstName": "Irene",
-                            "LastName": "Cara"
-                        },
-                        {
-                            "FirstName": "Lee",
-                            "LastName": "Curreri"
-                        },
-                        {
-                            "FirstName": "Paul",
-                            "LastName": "McCrane"
-                        },
-                        {
-                            "FirstName": "Gene Anthony",
-                            "LastName": "Ray"
-                        },
-                        {
-                            "FirstName": "Debbie",
-                            "LastName": "Allen"
-                        },
-                        {
-                            "FirstName": "Maureen",
-                            "LastName": "Teefy"
-                        },
-                        {
-                            "FirstName": "Eddie",
-                            "LastName": "Barth"
-                        },
-                        {
-                            "FirstName": "Barry",
-                            "LastName": "Miller"
-                        },
-                        {
-                            "FirstName": "Anne",
-                            "LastName": "Meara"
-                        },
-                        {
-                            "FirstName": "Albert",
-                            "LastName": "Hague"
-                        }
-                    ]
-                },
-                "Directors": {
-                    "Director": {
-                        "FirstName": "Alan",
-                        "LastName": "Parker"
-                    }
-                }
-            },
-            {
-                "ID": "302219",
-                "Title": "Itse ilkimys 3 - (2D) (dub)",
-                "OriginalTitle": "Despicable Me 3 - (2D) (dub)",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "96",
-                "dtLocalRelease": "2017-06-30T00:00:00",
-                "Rating": "7",
-                "RatingLabel": "7",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_7.png",
-                "LocalDistributorName": "Finnkinon teatterilevitys",
-                "GlobalDistributorName": "Finnkinon teatterilevitys - Universal",
-                "ProductionCompanies": "-",
-                "EventType": "Movie",
-                "Genres": "Komedia, Perhe-elokuva, Animaatio",
-                "ShortSynopsis": "Illumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.",
-                "Synopsis": "Suomeksi puhuttu normaaliversio (2D).
-
-                Illumination toi valkokankaalle Itse ilkimys - elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit.Kesällä 2017 tarinalle on tiedossa jatkoa.Koko perheen suosikkielokuvan jatko - osassa Itse ilkimys 3: ssa seikkailevat Gru ja Lucy,
-                heidän ihastuttavat tyttärensä Margo,
-                Edith ja Agnes sekä tietysti Kätyrit.
-
-                Vaikeina aikoina tarvitaan ilkimysmäisiä keinoja.Illumination Entertainmentin uudessa animaatiossa Gru ja hänen tuore vaimonsa Lucy palaavat valkokankaalle tyttäriensä Margon,
-                Edithin ja Agnesin sekä aina arvaamattomien kätyrien kera.Elokuvassa Itse ilkimys 3 Gru saa tietää,
-                että hänellä on kauan kateissa ollut lähes identtinen kaksoisveli Dru,
-                ja kohtaa tähän asti pahimman vastustajansa: hillittömän kasaritelkkaritähden nimeltä Balthazar Bratt.
-
-                Suomenkielisen ääniversion ohjaus Petri Hanttu.Äänirooleissa Ville Haapasalo(Gru),
-                Ville Haapasalo(Dru),
-                Katja Aakkula(Lucy),
-                Alissa Kovalainen(Agnes),
-                Ofelia Hanttu(Edith),
-                Kristiina Brask(Margo),
-                Carl - Kristian Rundman(Silas),
-                Juha Varis(Balthazar Bratt),
-                Jani Karvinen(Clive),
-                Pekka Autiovuori(Fritz),
-                Leena Uotila(Grun äiti),
-                Luca Elshout(Niko),
-                Sanna - June Hyde(Valerie),
-                Jaajo Linnonmaa(TV - juontaja),
-                Janne Porkka(Mainosääni) sekä Petri Hanttu,
-                Markku Huhtamo,
-                Rauno Ahonen,
-                Ella Pyhältö,
-                Sampo Kovalainen,
-                Tiia - Riikka Vuorinen,
-                Kari Tamminen,
-                Susa Saukko,
-                Aapo Pennanen,
-                Markus Degerman,
-                Elina Kauppila.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302219/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_micro/DespicableMe3_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_small/DespicableMe3_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_medium/DespicableMe3_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_small/DespicableMe3_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11564/landscape_small/DespicableMe3_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11564/landscape_large/DespicableMe3_670.jpg"
-                },
-                "Videos": {
-                    "EventVideo": {
-                        "Title": "Katso traileri",
-                        "Location": "GaYHN22NYB4",
-                        "MediaResourceSubType": "EventTrailer",
-                        "MediaResourceFormat": "YouTubeVideo"
-                    }
-                },
-                "Cast": {
-                    "Actor": [{
-                            "FirstName": "Ville",
-                            "LastName": "Haapasalo"
-                        },
-                        {
-                            "FirstName": "Katja",
-                            "LastName": "Aakkula"
-                        },
-                        {
-                            "FirstName": "Kristiina",
-                            "LastName": "Brask"
-                        },
-                        {
-                            "FirstName": "Carl-Christian",
-                            "LastName": "Rundman"
-                        },
-                        {
-                            "FirstName": "Juha",
-                            "LastName": "Varis"
-                        }
-                    ]
-                },
-                "Directors": {
-                    "Director": [{
-                            "FirstName": "Pierre",
-                            "LastName": "Coffin"
-                        },
-                        {
-                            "FirstName": "Kyle",
-                            "LastName": "Balda"
-                        }
-                    ]
-                },
-                "ContentDescriptors": {
-                    "ContentDescriptor": [{
-                            "Name": "Violence",
-                            "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
-                        },
-                        {
-                            "Name": "Disturbing",
-                            "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "ID": "302218",
-                "Title": "Itse ilkimys 3 - 3D (dub)",
-                "OriginalTitle": "Despicable Me 3 - 3D (dub)",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "96",
-                "dtLocalRelease": "2017-06-30T00:00:00",
-                "Rating": "7",
-                "RatingLabel": "7",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_7.png",
-                "LocalDistributorName": "Finnkinon teatterilevitys",
-                "GlobalDistributorName": "Finnkinon teatterilevitys - Universal",
-                "ProductionCompanies": "-",
-                "EventType": "Movie",
-                "Genres": "Komedia, Perhe-elokuva, Animaatio, 3D",
-                "ShortSynopsis": "Illumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.",
-                "Synopsis": "Suomeksi puhuttu 3D-versio.
-
-                Illumination toi valkokankaalle Itse ilkimys - elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit.Kesällä 2017 tarinalle on tiedossa jatkoa.Koko perheen suosikkielokuvan jatko - osassa Itse ilkimys 3: ssa seikkailevat Gru ja Lucy,
-                heidän ihastuttavat tyttärensä Margo,
-                Edith ja Agnes sekä tietysti Kätyrit.
-
-                Vaikeina aikoina tarvitaan ilkimysmäisiä keinoja.Illumination Entertainmentin uudessa animaatiossa Gru ja hänen tuore vaimonsa Lucy palaavat valkokankaalle tyttäriensä Margon,
-                Edithin ja Agnesin sekä aina arvaamattomien kätyrien kera.Elokuvassa Itse ilkimys 3 Gru saa tietää,
-                että hänellä on kauan kateissa ollut lähes identtinen kaksoisveli Dru,
-                ja kohtaa tähän asti pahimman vastustajansa: hillittömän kasaritelkkaritähden nimeltä Balthazar Bratt.
-
-                Suomenkielisen ääniversion ohjaus Petri Hanttu.Äänirooleissa Ville Haapasalo(Gru & Dru),
-                Katja Aakkula(Lucy),
-                Alissa Kovalainen(Agnes),
-                Ofelia Hanttu(Edith),
-                Kristiina Brask(Margo),
-                Carl - Kristian Rundman(Silas),
-                Juha Varis(Balthazar Bratt),
-                Jani Karvinen(Clive),
-                Pekka Autiovuori(Fritz),
-                Leena Uotila(Grun äiti),
-                Luca Elshout(Niko),
-                Sanna - June Hyde(Valerie),
-                Jaajo Linnonmaa(TV - juontaja),
-                Janne Porkka(Mainosääni) sekä Petri Hanttu,
-                Markku Huhtamo,
-                Rauno Ahonen,
-                Ella Pyhältö,
-                Sampo Kovalainen,
-                Tiia - Riikka Vuorinen,
-                Kari Tamminen,
-                Susa Saukko,
-                Aapo Pennanen,
-                Markus Degerman,
-                Elina Kauppila.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302218/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_micro/DespicableMe3_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_small/DespicableMe3_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_medium/DespicableMe3_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_small/DespicableMe3_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11563/landscape_small/DespicableMe3_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11563/landscape_large/DespicableMe3_670.jpg"
-                },
-                "Videos": {
-                    "EventVideo": {
-                        "Title": "Katso traileri",
-                        "Location": "GaYHN22NYB4",
-                        "MediaResourceSubType": "EventTrailer",
-                        "MediaResourceFormat": "YouTubeVideo"
-                    }
-                },
-                "Cast": {
-                    "Actor": [{
-                            "FirstName": "Ville",
-                            "LastName": "Haapasalo"
-                        },
-                        {
-                            "FirstName": "Katja",
-                            "LastName": "Aakkula"
-                        },
-                        {
-                            "FirstName": "Kristiina",
-                            "LastName": "Brask"
-                        },
-                        {
-                            "FirstName": "Carl-Christian",
-                            "LastName": "Rundman"
-                        },
-                        {
-                            "FirstName": "Juha",
-                            "LastName": "Varis"
-                        }
-                    ]
-                },
-                "Directors": {
-                    "Director": [{
-                            "FirstName": "Pierre",
-                            "LastName": "Coffin"
-                        },
-                        {
-                            "FirstName": "Kyle",
-                            "LastName": "Balda"
-                        }
-                    ]
-                },
-                "ContentDescriptors": {
-                    "ContentDescriptor": [{
-                            "Name": "Violence",
-                            "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
-                        },
-                        {
-                            "Name": "Disturbing",
-                            "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "ID": "302191",
-                "Title": "MET kesäencore: Carmen",
-                "OriginalTitle": "MET summer encore: Carmen",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "180",
-                "dtLocalRelease": "2017-07-12T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "The Metropolitan Opera",
-                "GlobalDistributorName": "The Metropolitan Opera",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Ooppera, Kesäencore, Event cinema",
-                "ShortSynopsis": "Carmen, yksi kaikkien aikojen suosituimmista oopperoista, kertoo \"seksistä, väkivallasta ja rasismista - sekä vapaudesta\", sanoo Olivier-palkittu ohjaaja Richard Eyre produktiostaan Bizet’n draamasta. \"Se on kiistatta yksi suurista taideteoksista. Se on seksikäs, joka suhteessa.",
-                "Synopsis": "Georges Bizet: Carmen
-
-                Keskiviikkona 12.7 .2017 klo 19(kaudelta 2009 - 2010)
-
-                Carmen,
-                yksi kaikkien aikojen suosituimmista oopperoista,
-                kertoo\ "seksistä, väkivallasta ja rasismista - sekä vapaudesta\", sanoo Olivier-palkittu ohjaaja Richard Eyre produktiostaan Bizet’n draamasta. \"Se on kiistatta yksi suurista taideteoksista. Se on seksikäs, joka suhteessa. Ja uskon, että sen pitää shokeerata”. Elina Garanca tekee nimiroolin viettelevänä mustalaisena, ja Roberto Alagna laulaa pakkomielteisen Don Josén roolin.
-
-                Kapellimestari Yannick Nézet - Séguin,
-                ohjaus Richard Eyre
-                Rooleissa mm.Elina Garanca,
-                Roberto Alagna,
-                Barbara Frittoli,
-                Teddy Tahu Rhodes
-
-                Kesto n.3 h,
-                sis.yhden väliajan(10 min).Englanninkielinen tekstitys.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302191/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_micro/1704_Carmen_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_small/1704_Carmen_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_medium/1704_Carmen_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_small/1704_Carmen_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11536/landscape_small/1704_Carmen_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11536/landscape_large/1704_Carmen_670.jpg"
-                }
-            },
-            {
-                "ID": "302189",
-                "Title": "MET kesäencore: Helmenkalastajat",
-                "OriginalTitle": "MET summer encore: Les Pecheurs de Perles",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "133",
-                "dtLocalRelease": "2017-06-28T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "The Metropolitan Opera",
-                "GlobalDistributorName": "The Metropolitan Opera",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Ooppera, Kesäencore, Event cinema",
-                "ShortSynopsis": "Eksottisessa Ceylonissa tapahtuva Helmenkalastajat on Georges Bizet'n toinen ohjelmistoon vakiintunut ooppera. Sitä ei ole jostain syystä koskaan nähty Suomen kansallisoopperassa, mutta tenori Jussi Björling on tehnyt tunnetuiksi ja rakastetuiksi Je crois entendre encore -aarian sekä Nadirin ja Zurgan dueton Au fond du temple saint.",
-                "Synopsis": "Georges Bizet: Helmenkalastajat
-
-                Keskiviikkona 28.6 .2017 klo 19(kaudelta 2015 - 16)
-
-                Eksottisessa Ceylonissa tapahtuva Helmenkalastajat on Georges Bizet 'n toinen ohjelmistoon vakiintunut ooppera. Sitä ei ole jostain syystä koskaan nähty Suomen kansallisoopperassa, mutta tenori Jussi Björling on tehnyt tunnetuiksi ja rakastetuiksi Je crois entendre encore -aarian sekä Nadirin ja Zurgan dueton Au fond du temple saint. Niitä voi nyt ihailla Metropolitan-oopperan vakiokasvoihin kuuluvien tenori Matthew Polenzanin ja baritoni Mariusz Kwiecienin laulamana. Nousujohteista kansainvälistä uraa tekevä koloratuurisopraano Diana Damrau täydentää tähtikaartin. Doctor Atomic on elokuvaohjaajana meritoituneen Penny Woolcockin edellinen Metropolitan-oopperan ohjaus. Meilläkin vieraillut Gianandrea Noseda johtaa teoksen.
-
-                Kapellimestari Gianandrea Noseda,
-                ohjaus Penny Woolcock
-                Rooleissa mm.Diana Damrau,
-                Matthew Polenzani,
-                Mariusz Kwiecien,
-                Nicolas Testé
-
-                Kesto n.2 h 13 min,
-                sis.yhden väliajan(10 min).Englanninkielinen tekstitys.
-
-                Huom.Tampereen Plevnan esitys on siirretty lamppuremontin vuoksi salista 7 saliin 6. Kaikki lipun ostaneet saavat salin ovella vaihdettua lippunsa mahdollisimman vastaaviin paikkoihin tässä hieman isommassa salissa.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302189/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_micro/1702_LesPecheursDePerles_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_small/1702_LesPecheursDePerles_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_medium/1702_LesPecheursDePerles_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_small/1702_LesPecheursDePerles_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11534/landscape_small/1702_LesPecheursDePerles_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11534/landscape_large/1702_LesPecheursDePerles_670.jpg"
-                }
-            },
-            {
-                "ID": "302190",
-                "Title": "MET kesäencore: Macbeth",
-                "OriginalTitle": "MET summer encore: Macbeth",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "147",
-                "dtLocalRelease": "2017-07-05T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "The Metropolitan Opera",
-                "GlobalDistributorName": "The Metropolitan Opera",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Ooppera, Kesäencore, Event cinema",
-                "ShortSynopsis": "William Shakespearen näytelmään pohjautuva ooppera pahuuden kehittymisestä ja vallan sokaisevasta vaikutuksesta on suomalaisyleisölle hyvinkin tuttu Savonlinnan oopperajuhlilta. Sopraano Anna Netrebko lauloi vuonna 2014 Lady Macbethin roolin ensimmäistä kertaa urallaan, ensin kesä-heinäkuussa Baijerin valtionoopperassa ja syksyllä Metissä.",
-                "Synopsis": "​Giuseppe Verdi: Macbeth
-
-                Keskiviikkona 5.7 .2017 klo 19(kaudelta 2014 - 2015)
-
-                William Shakespearen näytelmään pohjautuva ooppera pahuuden kehittymisestä ja vallan sokaisevasta vaikutuksesta on suomalaisyleisölle hyvinkin tuttu Savonlinnan oopperajuhlilta.Sopraano Anna Netrebko lauloi vuonna 2014 Lady Macbethin roolin ensimmäistä kertaa urallaan,
-                ensin kesä - heinäkuussa Baijerin valtionoopperassa ja syksyllä Metissä.Suomessa konsertoinut tenori Joseph Calleja nähdään Macduffina.Baritoni Željko Lučić laulaa nimiroolin.Basso René Pape täydentää huippulaulajien tähtikaartin Banquona.
-
-                Kapellimestari Fabio Luisi,
-                ohjaus Adrian Noble,
-                lavastus Mark Thompson,
-                puvut Mark Thompson,
-                valot Jean Kalman,
-                koreografia Sue Lefton
-                Rooleissa Anna Netrebko(Lady Macbeth),
-                Željko Lucic(Macbeth),
-                Joseph Calleja(Macduff),
-                René Pape(Banquo)
-
-                Kesto n.2 h 27 min,
-                sis.yhden väliajan(10 min).Englanninkielinen tekstitys.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302190/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_micro/1703_Macbeth_1080z.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_small/1703_Macbeth_1080z.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_medium/1703_Macbeth_1080z.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_small/1703_Macbeth_1080z.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11535/landscape_small/1703_Macbeth_444v.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11535/landscape_large/1703_Macbeth_670v.jpg"
-                }
-            },
-            {
-                "ID": "302270",
-                "Title": "Moonwalker",
-                "OriginalTitle": "Moonwalker",
-                "ProductionYear": "1988",
-                "LengthInMinutes": "93",
-                "dtLocalRelease": "2017-06-28T00:00:00",
-                "Rating": "12",
-                "RatingLabel": "12",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_12.png",
-                "LocalDistributorName": "Park Circus Limited",
-                "GlobalDistributorName": "Park Circus Limited",
-                "ProductionCompanies": "-",
-                "EventType": "Movie",
-                "Genres": "Fantasia, Musiikki, Event cinema",
-                "ShortSynopsis": "Anthology movie by, and starring, Michael Jackson in his prime, combining a number of music videos from his bestselling \"Bad\" album with a fantasy tale of Michael's confrontation with a ruthless drug dealer known as Mr. Big (Joe Pesci). Elokuva on englanninkielinen; ei tekstitystä.",
-                "Synopsis": "Kesäleffa-esitys keskiviikkona 28.6.!
-
-                Anthology movie by,
-                and starring,
-                Michael Jackson in his prime,
-                combining a number of music videos from his bestselling\ "Bad\" album with a fantasy tale of Michael's confrontation with a ruthless drug dealer known as Mr. Big (Joe Pesci).
-
-                Elokuva on englanninkielinen;ei tekstitystä.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302270/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_micro/Moonwalker_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_small/Moonwalker_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_medium/Moonwalker_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_small/Moonwalker_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11615/landscape_small/Moonwalker_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11615/landscape_large/Moonwalker_670.jpg"
-                },
-                "Directors": {
-                    "Director": [{
-                            "FirstName": "Jerry",
-                            "LastName": "Kramer"
-                        },
-                        {
-                            "FirstName": "Jim",
-                            "LastName": "Blashfield"
-                        },
-                        {
-                            "FirstName": "Colin",
-                            "LastName": "Chilvers"
-                        }
-                    ]
-                }
-            },
-            {
-                "ID": "302242",
-                "Title": "NT live: Angels in America I: Millennium Approaches",
-                "OriginalTitle": "NT live: Angels in America I: Millennium Approaches",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "225",
-                "dtLocalRelease": "2017-08-21T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "By Experience",
-                "GlobalDistributorName": "By Experience",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Teatteri, Event cinema",
-                "ShortSynopsis": "Amerikka 1980-luvun puolivälissä. Newyorkilaiset painiskelevat elämän ja kuoleman, rakkauden ja seksin, taivaan ja helvetin kysymysten kanssa, keskellä AIDS-kriisiä ja konservatiivista Reaganin hallintoa. Andrew Garfield (Silence, Hacksaw Ridge) esittää priori Walteria (Prior Walter).",
-                "Synopsis": "Tony Kushnerin näytelmä: Angels in America / osa I, Millennium Approaches
-
-                Ma 21.8.klo 18(tallennettu 20.7.esityksestä)
-
-                Amerikka 1980 - luvun puolivälissä.Newyorkilaiset painiskelevat elämän ja kuoleman,
-                rakkauden ja seksin,
-                taivaan ja helvetin kysymysten kanssa,
-                keskellä AIDS - kriisiä ja konservatiivista Reaganin hallintoa.
-
-                Andrew Garfield(Silence, Hacksaw Ridge) esittää priori Walteria(Prior Walter).Muissa rooleissa nähdään Denise Gough(People, Places and Things),
-                Nathan Lane(The Producers),
-                James McArdle(Star Wars: The Force Awakens) ja Russell Tovey(The Pass).
-
-                Tony Kushnerin monia palkintoja voittaneen kaksiosaisen näytelmän uuden näyttämöllepanon on ohjannut Olivier - ja Tony - palkittu ohjaaja Marianne Elliott(The Curious Incident of the Dog in the Night - Time ja War Horse).
-
-                Kesto n.3 h 45 min.Englanniksi;myös tekstitys englanniksi.
-
-                Huom!Yleisön pyynnöstä Angels in America I ja II esitetään myös Kuopion Scalassa!",
-                "EventURL": "http://www.finnkino.fi/Event/302242/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_micro/NT_AngelsInAmerica1_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_small/NT_AngelsInAmerica1_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_medium/NT_AngelsInAmerica1_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_small/NT_AngelsInAmerica1_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11587/landscape_small/NT_AngelsInAmerica1_444b.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11587/landscape_large/NT_AngelsInAmerica1_670b.jpg"
-                }
-            },
-            {
-                "ID": "302243",
-                "Title": "NT live: Angels in America II: Perestroika",
-                "OriginalTitle": "NT live: Angels in America II: Perestroika",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "225",
-                "dtLocalRelease": "2017-08-28T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "By Experience",
-                "GlobalDistributorName": "By Experience",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Teatteri, Event cinema",
-                "ShortSynopsis": "Amerikka 1980-luvun puolivälissä. Newyorkilaiset painiskelevat elämän ja kuoleman, rakkauden ja seksin, taivaan ja helvetin kysymysten kanssa, keskellä AIDS-kriisiä ja konservatiivista Reaganin hallintoa. Andrew Garfield (Silence, Hacksaw Ridge) esittää priori Walteria (Prior Walter).",
-                "Synopsis": "Tony Kushnerin näytelmä: Angels in America /osa II, Perestroika
-
-                Ma 28.8.klo 18(tallennettu 27.7.esityksestä)
-
-                Amerikka 1980 - luvun puolivälissä.Newyorkilaiset painiskelevat elämän ja kuoleman,
-                rakkauden ja seksin,
-                taivaan ja helvetin kysymysten kanssa,
-                keskellä AIDS - kriisiä ja konservatiivista Reaganin hallintoa.
-
-                Andrew Garfield(Silence, Hacksaw Ridge) esittää priori Walteria(Prior Walter).Muissa rooleissa nähdään Denise Gough(People, Places and Things),
-                Nathan Lane(The Producers),
-                James McArdle(Star Wars: The Force Awakens) ja Russell Tovey(The Pass).
-
-                Tony Kushnerin monia palkintoja voittaneen kaksiosaisen näytelmän uuden näyttämöllepanon on ohjannut Olivier - ja Tony - palkittu ohjaaja Marianne Elliott(The Curious Incident of the Dog in the Night - Time ja War Horse).
-
-                Kesto n.3 h 45 min.Englanniksi;myös tekstitys englanniksi.
-
-                Huom!Yleisön pyynnöstä Angels in America I ja II esitetään myös Kuopion Scalassa!",
-                "EventURL": "http://www.finnkino.fi/Event/302243/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_micro/NT_AngelsInAmerica1_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_small/NT_AngelsInAmerica1_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_medium/NT_AngelsInAmerica1_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_small/NT_AngelsInAmerica1_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11588/landscape_small/NT_AngelsInAmerica1_444b.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11588/landscape_large/NT_AngelsInAmerica1_670b.jpg"
-                }
-            },
-            {
-                "ID": "302241",
-                "Title": "NT live: Salome",
-                "OriginalTitle": "NT live: Salome",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "210",
-                "dtLocalRelease": "2017-08-14T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "By Experience",
-                "GlobalDistributorName": "By Experience",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Teatteri, Event cinema",
-                "ShortSynopsis": "Miehityksen alla autiomaassa elävä kansa. Erämaan radikaali on nälkälakossa. Tyttö, jonka mystinen tanssi muuttaa maailmanhistorian kulun. Latautunut uudelleenkerronta kääntää raamatun pahamaineisen tarinan päälaelleen asettaen Salomeksi kutsumamme tytön vallankumouksen keskiöön.",
-                "Synopsis": "Yaël Farberin näytelmä: Salome
-
-                Ma 14.8.klo 18.00(tallennettu 22.6.esityksestä)
-
-                Tämä tarina on kerrottu aiemminkin,
-                muttei koskaan tällä tavalla.
-
-                Miehityksen alla autiomaassa elävä kansa.Erämaan radikaali on nälkälakossa.Tyttö,
-                jonka mystinen tanssi muuttaa maailmanhistorian kulun.
-
-                Latautunut uudelleenkerronta kääntää raamatun pahamaineisen tarinan päälaelleen asettaen Salomeksi kutsumamme tytön vallankumouksen keskiöön.
-
-                Kansainvälistä tunnustusta saanut teatteriohjaaja Yaël Farber(Les Blancs) on ottanut vaikutteita monista lähteistä luodessaan polttavan ajankohtaisen ja hypnoottisen National Theatren ohjauksensa.
-
-                Kesto n.3 h 30 min.Englanniksi;myös tekstitys englanniksi.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302241/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_micro/NT_Salome_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_small/NT_Salome_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_medium/NT_Salome_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_small/NT_Salome_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11586/landscape_small/NT_Salome_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11586/landscape_large/NT_Salome_670.jpg"
-                }
-            },
-            {
-                "ID": "302244",
-                "Title": "NT live: Yerma",
-                "OriginalTitle": "NT live: Yerma",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "120",
-                "dtLocalRelease": "2017-09-25T00:00:00",
-                "Rating": "Luok_vap",
-                "RatingLabel": "Luok.vap.",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
-                "LocalDistributorName": "By Experience",
-                "GlobalDistributorName": "By Experience",
-                "ProductionCompanies": "-",
-                "EventType": "LiveEvent",
-                "Genres": "Teatteri, Event cinema",
-                "ShortSynopsis": "Billie Piper (Penny Dreadful, Great Britain) palaa palkittuun rooliinsa. Lasta epätoivoisesti haluava nuori nainen ajautuu käsittämättömään tekoon Simon Stonen radikaalissa ohjauksessa Lorcan kipeän vahvasta mestariteoksesta. Teatteriesitys, jota ei voi jättää väliin myi katsomot täyteen Young Vic -teatterissa.",
-                "Synopsis": "Federico Garcia Lorcan näytelmä: Yerma
-
-                Ma 25.9.klo 18(tallennettu 31.8.esityksestä)
-
-                Billie Piper(Penny Dreadful, Great Britain) palaa palkittuun rooliinsa.Lasta epätoivoisesti haluava nuori nainen ajautuu käsittämättömään tekoon Simon Stonen radikaalissa ohjauksessa Lorcan kipeän vahvasta mestariteoksesta.Teatteriesitys,
-                jota ei voi jättää väliin myi katsomot täyteen Young Vic - teatterissa.Kriitikoiden mukaan esitys on” tavallisen esityksen yläpuolelle nouseva teatteritaiteen voitto”(The Times) sekä” tyrmäävä,
-                vihlova ja mahdoton jättää näkemättä”(Mail on Sunday).Billie Piperin pääroolin tekemistä nimitetään” lumoavaksi”(The Evening Standard),
-                ”suuresti vaikuttavaksi”(iNews) sekä” musertavan vaikuttavaksi”(The Daily Telegraph).Ohjaaja on sijoittanut näytelmän oman aikamme Lontooseen.Piperin roolityö kolmikymppisenä epätoivoisesti lasta haluavana naisena kasvaa alkuvoimaisella vimmalla huikeaan ja järkyttävään kliimaksiin.Esityksessä ei ole väliaikaa.
-
-                Kesto n.2 h(ei väliaikaa).Englanniksi;myös tekstitys englanniksi.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302244/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_micro/NT_Yerma_1080.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_small/NT_Yerma_1080.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_medium/NT_Yerma_1080.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_small/NT_Yerma_1080.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11589/landscape_small/NT_Yerma_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11589/landscape_large/NT_Yerma_670.jpg"
-                }
-            },
-            {
-                "ID": "302246",
-                "Title": "Spider-Man: Homecoming (2D)",
-                "OriginalTitle": "Spider-Man: Homecoming (2D)",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "134",
-                "dtLocalRelease": "2017-07-05T00:00:00",
-                "Rating": "Tulossa",
-                "RatingLabel": "Tulossa",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Tulossa.png",
-                "LocalDistributorName": "Walt Disney Studios Motion Pictures AB",
-                "GlobalDistributorName": "Walt Disney Studios Motion Pictures AB",
-                "ProductionCompanies": "-",
-                "EventType": "Movie",
-                "Genres": "Toiminta, Seikkailu, Sci-fi",
-                "ShortSynopsis": "Nuori Peter Parker/Spider-Man (Tom Holland), joka nähtiin ensi kertaa elokuvassa Captain America: Civil War, totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER-MAN: HOMECOMING. May-tätinsä (Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa.",
-                "Synopsis": "Normaaliversio (2D).
-
-                Nuori Peter Parker / Spider - Man(Tom Holland),
-                joka nähtiin ensi kertaa elokuvassa Captain America: Civil War,
-                totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER - MAN: HOMECOMING.May - tätinsä(Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa.Uuden mentorinsa Tony Starkin(Robert Downey Jr.) valvovan silmän alla Peterin paluuta tavalliseen arkeen häiritsevät vain hänen haaveensa todistaa olevansa muutakin kuin vain ystävällinen koko naapuruston Spider - Man.Mutta kun Vulture(Michael Keaton) ilmestyy kuvioihin uutena pahiksena,
-                kaikki mikä on Peterille tärkeää joutuu vaaraan.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302246/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_micro/SpiderManHomecoming_1080t.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_small/SpiderManHomecoming_1080t.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_medium/SpiderManHomecoming_1080t.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_small/SpiderManHomecoming_1080t.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11591/landscape_small/SpiderManHomecoming_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11591/landscape_large/SpiderManHomecoming_670.jpg"
-                },
-                "Videos": {
-                    "EventVideo": {
-                        "Title": "Katso traileri",
-                        "Location": "Oo6RUr0Zzwc",
-                        "MediaResourceSubType": "EventTrailer",
-                        "MediaResourceFormat": "YouTubeVideo"
-                    }
-                },
-                "Cast": {
-                    "Actor": [{
-                            "FirstName": "Tom",
-                            "LastName": "Holland"
-                        },
-                        {
-                            "FirstName": "Robert",
-                            "LastName": "Downey Jr."
-                        },
-                        {
-                            "FirstName": "Marisa",
-                            "LastName": "Tomei"
-                        },
-                        {
-                            "FirstName": "Michael",
-                            "LastName": "Keaton"
-                        },
-                        {
-                            "FirstName": "Chris",
-                            "LastName": "Evans"
-                        },
-                        {
-                            "FirstName": "Logan",
-                            "LastName": "Marshall-Green"
-                        },
-                        {
-                            "FirstName": "Jon",
-                            "LastName": "Favreau"
-                        }
-                    ]
-                },
-                "Directors": {
-                    "Director": {
-                        "FirstName": "Jon",
-                        "LastName": "Watts"
-                    }
-                }
-            },
-            {
-                "ID": "302245",
-                "Title": "Spider-Man: Homecoming 3D",
-                "OriginalTitle": "Spider-Man: Homecoming 3D",
-                "ProductionYear": "2017",
-                "LengthInMinutes": "134",
-                "dtLocalRelease": "2017-07-05T00:00:00",
-                "Rating": "Tulossa",
-                "RatingLabel": "Tulossa",
-                "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Tulossa.png",
-                "LocalDistributorName": "Walt Disney Studios Motion Pictures AB",
-                "GlobalDistributorName": "Walt Disney Studios Motion Pictures AB",
-                "ProductionCompanies": "-",
-                "EventType": "Movie",
-                "Genres": "Toiminta, Seikkailu, Sci-fi, 3D",
-                "ShortSynopsis": "Nuori Peter Parker/Spider-Man (Tom Holland), joka nähtiin ensi kertaa elokuvassa Captain America: Civil War, totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER-MAN: HOMECOMING. May-tätinsä (Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa.",
-                "Synopsis": "3D-versio.
-
-                Nuori Peter Parker / Spider - Man(Tom Holland),
-                joka nähtiin ensi kertaa elokuvassa Captain America: Civil War,
-                totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER - MAN: HOMECOMING.May - tätinsä(Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa.Uuden mentorinsa Tony Starkin(Robert Downey Jr.) valvovan silmän alla Peterin paluuta tavalliseen arkeen häiritsevät vain hänen haaveensa todistaa olevansa muutakin kuin vain ystävällinen koko naapuruston Spider - Man.Mutta kun Vulture(Michael Keaton) ilmestyy kuvioihin uutena pahiksena,
-                kaikki mikä on Peterille tärkeää joutuu vaaraan.
-                ",
-                "EventURL": "http://www.finnkino.fi/Event/302245/",
-                "Images": {
-                    "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_micro/SpiderManHomecoming_1080t.jpg",
-                    "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_small/SpiderManHomecoming_1080t.jpg",
-                    "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_medium/SpiderManHomecoming_1080t.jpg",
-                    "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_small/SpiderManHomecoming_1080t.jpg",
-                    "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11590/landscape_small/SpiderManHomecoming_444.jpg",
-                    "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11590/landscape_large/SpiderManHomecoming_670.jpg"
-                },
-                "Videos": {
-                    "EventVideo": {
-                        "Title": "Katso traileri",
-                        "Location": "Oo6RUr0Zzwc",
-                        "MediaResourceSubType": "EventTrailer",
-                        "MediaResourceFormat": "YouTubeVideo"
-                    }
-                },
-                "Cast": {
-                    "Actor": [{
-                            "FirstName": "Tom",
-                            "LastName": "Holland"
-                        },
-                        {
-                            "FirstName": "Robert",
-                            "LastName": "Downey Jr."
-                        },
-                        {
-                            "FirstName": "Marisa",
-                            "LastName": "Tomei"
-                        },
-                        {
-                            "FirstName": "Michael",
-                            "LastName": "Keaton"
-                        },
-                        {
-                            "FirstName": "Chris",
-                            "LastName": "Evans"
-                        },
-                        {
-                            "FirstName": "Logan",
-                            "LastName": "Marshall-Green"
-                        },
-                        {
-                            "FirstName": "Jon",
-                            "LastName": "Favreau"
-                        }
-                    ]
-                },
-                "Directors": {
-                    "Director": {
-                        "FirstName": "Jon",
-                        "LastName": "Watts"
-                    }
-                }
+               "FirstName": "Joshua",
+               "LastName": "Homme"
             }
-        ]
-    }
+         ],
+         "Directors": [
+            {
+               "FirstName": "Andreas",
+               "LastName": "Neumann"
+            },
+            {
+               "FirstName": "Joshua",
+               "LastName": "Homme"
+            }
+         ],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302268",
+         "Title": "David Gilmour Live at Pompeii",
+         "OriginalTitle": "David Gilmour Live at Pompeii",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "120",
+         "dtLocalRelease": "2017-09-13T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "StoryHill Oy",
+         "GlobalDistributorName": "StoryHill Oy",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Konsertti, Event cinema",
+         "ShortSynopsis": "Pink Floydin keulakuva David Gilmour palaa 45 vuoden jälkeen Pompejin legendaariseen amfiteatteriin. Nyt kyseessä on kuitenkin ensimmäinen kerta, kun antiikin Rooman aikaisessa amfiteatterissa on myös yleisöä: vain 2600 fania pääsi kokemaan konsertin samoilla jalansijoilla, joissa gladiaattorit ovat taistelleet vuosituhannen alussa.",
+         "Synopsis": "Pink Floydin keulakuva David Gilmour palaa 45 vuoden jälkeen Pompejin legendaariseen amfiteatteriin. Nyt kyseessä on kuitenkin ensimmäinen kerta, kun antiikin Rooman aikaisessa amfiteatterissa on myös yleisöä: vain 2600 fania pääsi kokemaan konsertin samoilla jalansijoilla, joissa gladiaattorit ovat taistelleet vuosituhannen alussa. Kyseessä on ”Rattle That Lock” -kiertueen kaksi vaikuttavaa konserttia.\n\nDavid Gilmour Live at Pompeii on spektaakkeli. Se on visuaalisesti näyttävä lasereiden, pyrotekniikan sekä valtavan kokoisen pyöreän screenin ansiosta. Tältä jättinäytöltä nähdään konserttia varten luotuja ja musiikkia täydentäviä filmejä. Ennen kaikkea käsillä on upea musiikkikonsertti yhdessä huippumuusikkojen kanssa.\n\nEsityksessä kuullaan niin Pink Floydin klassikkoja kuin kappaleita David Gilmourin soolouralta. Yksi erikoisuuksista on One of These Days, jonka Pink Floyd esitti Pompejin konserttitaltioinnissaan vuonna 1971. Konsertin muita erityisyyksiä on mm. The Dark Side of the Moon -levyn The Great Gig in the Sky -kappale, jota Gilmour on harvoin sooloartistina soittanut. Lisäksi kuullaan kappaleita kahdelta uusimmalta albumilta, Rattle That Lock ja On an Island sekä muita Gilmourin soolouran ja Pink Floydin klassikkoja, kuten Wish You Were Here ja Comfortably Numb. Tämä konserttiesitys pitää sisällään huippukohdat molemmista amfiteatterissa koetuista keikoista. Ohjauksesta vastaa Gavin Elder.\n\nKonsertissa nähdään musiikkimaailman huippuartisti, joka esittää ainutlaatuisissa puitteissa upeaa musiikkituotantoa yhdessä maailmanluokan yhtyeen kanssa. David Gilmour Live at Pompeii -konsertit saivat ylistäviä arvioita niin faneilta kuin kriitikoilta, mm. The Guardian -lehti antoi täydet 5 tähteä.\n\nEsitykset vain yhtenä iltana, keskiviikkona 13.9. klo 20.00, Finnkinon teattereissa Helsingissä (Tennispalatsi), Espoossa (Sello), Vantaalla, Jyväskylässä, Kuopiossa, Lahdessa, Lappeenrannassa (Strand), Oulussa, Porissa, Tampereella (Plevna) ja Turussa.",
+         "EventURL": "http://www.finnkino.fi/Event/302268/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_micro/DavidGilmour_LiveAtPompeii_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_small/DavidGilmour_LiveAtPompeii_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_medium/DavidGilmour_LiveAtPompeii_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11613/portrait_small/DavidGilmour_LiveAtPompeii_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11613/landscape_small/DavidGilmour_LiveAtPompeii_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11613/landscape_large/DavidGilmour_LiveAtPompeii_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": {
+            "Director": {
+               "FirstName": "Gavin",
+               "LastName": "Elder"
+            }
+         },
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302269",
+         "Title": "Fame",
+         "OriginalTitle": "Fame",
+         "ProductionYear": "1980",
+         "LengthInMinutes": "134",
+         "dtLocalRelease": "2017-07-26T00:00:00",
+         "Rating": "12",
+         "RatingLabel": "12",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_12.png",
+         "LocalDistributorName": "Park Circus Limited",
+         "GlobalDistributorName": "Park Circus Limited",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Draama, Musiikki, Event cinema",
+         "ShortSynopsis": "A chronicle of the lives of several teenagers who attend a New York high school for students gifted in the performing arts. Elokuva on englanninkielinen; ei tekstitystä.",
+         "Synopsis": "Kesäklassikko keskiviikkona 26.7.! Alkuperäinen Fame-elokuva vuodelta 1980.\n\nA chronicle of the lives of several teenagers who attend a New York high school for students gifted in the performing arts.\n\nElokuva on englanninkielinen; ei tekstitystä.",
+         "EventURL": "http://www.finnkino.fi/Event/302269/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_micro/Fame_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_small/Fame_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_medium/Fame_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11614/portrait_small/Fame_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11614/landscape_small/Fame_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11614/landscape_large/Fame_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [
+            {
+               "FirstName": "Irene",
+               "LastName": "Cara"
+            },
+            {
+               "FirstName": "Lee",
+               "LastName": "Curreri"
+            },
+            {
+               "FirstName": "Paul",
+               "LastName": "McCrane"
+            },
+            {
+               "FirstName": "Gene Anthony",
+               "LastName": "Ray"
+            },
+            {
+               "FirstName": "Debbie",
+               "LastName": "Allen"
+            },
+            {
+               "FirstName": "Maureen",
+               "LastName": "Teefy"
+            },
+            {
+               "FirstName": "Eddie",
+               "LastName": "Barth"
+            },
+            {
+               "FirstName": "Barry",
+               "LastName": "Miller"
+            },
+            {
+               "FirstName": "Anne",
+               "LastName": "Meara"
+            },
+            {
+               "FirstName": "Albert",
+               "LastName": "Hague"
+            }
+         ],
+         "Directors": {
+            "Director": {
+               "FirstName": "Alan",
+               "LastName": "Parker"
+            }
+         },
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302263",
+         "Title": "It Comes at Night",
+         "OriginalTitle": "It Comes at Night",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "97",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "16",
+         "RatingLabel": "16",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_16.png",
+         "LocalDistributorName": "Finnkinon teatterilevitys",
+         "GlobalDistributorName": "Finnkinon teatterilevitys",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Kauhu",
+         "ShortSynopsis": "Kammottavan uhan riivatessa maailmaa eräs mies ei ole jäänyt toimettomaksi, vaan hän on luonut syrjäisen kotinsa suojiin yhdessä vaimonsa ja poikansa kanssa tiukasti säännellyn turvapaikan. Heidän toimintamallinsa joutuu pian testiin, kun epätoivoinen nuori perhe hakeutuu suojaan heidän luokseen.",
+         "Synopsis": "Kammottavan uhan riivatessa maailmaa eräs mies ei ole jäänyt toimettomaksi, vaan hän on luonut syrjäisen kotinsa suojiin yhdessä vaimonsa ja poikansa kanssa tiukasti säännellyn turvapaikan. Heidän toimintamallinsa joutuu pian testiin, kun epätoivoinen nuori perhe hakeutuu suojaan heidän luokseen. Vainoharhaisuus ja epäluottamus alkavat kuitenkin vallata alaa, kun hengenvaarallinen uhka hiipii vääjäämättä lähemmäs myös heidän olinpaikkaansa.",
+         "EventURL": "http://www.finnkino.fi/Event/302263/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11608/portrait_micro/ItComesAtNight_1080t.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11608/portrait_small/ItComesAtNight_1080t.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11608/portrait_medium/ItComesAtNight_1080t.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11608/portrait_small/ItComesAtNight_1080t.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11608/landscape_small/ItComesAtNight_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11608/landscape_large/ItComesAtNight_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "crFcP7kAj7Y",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Joel",
+               "LastName": "Edgerton"
+            },
+            {
+               "FirstName": "Carmen",
+               "LastName": "Ejogo"
+            },
+            {
+               "FirstName": "Kelvin",
+               "LastName": "Harrison, Jr."
+            },
+            {
+               "FirstName": "Christopher",
+               "LastName": "Abbott"
+            },
+            {
+               "FirstName": "Riley",
+               "LastName": "Keough"
+            }
+         ],
+         "Directors": {
+            "Director": {
+               "FirstName": "Trey Edward",
+               "LastName": "Shults"
+            }
+         },
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302219",
+         "Title": "Itse ilkimys 3 - (2D) (dub)",
+         "OriginalTitle": "Despicable Me 3 - (2D) (dub)",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "96",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "7",
+         "RatingLabel": "7",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_7.png",
+         "LocalDistributorName": "Finnkinon teatterilevitys",
+         "GlobalDistributorName": "Finnkinon teatterilevitys - Universal",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Komedia, Perhe-elokuva, Animaatio",
+         "ShortSynopsis": "Illumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.",
+         "Synopsis": "Suomeksi puhuttu normaaliversio (2D).\n\nIllumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.\n\nVaikeina aikoina tarvitaan ilkimysmäisiä keinoja. Illumination Entertainmentin uudessa animaatiossa Gru ja hänen tuore vaimonsa Lucy palaavat valkokankaalle tyttäriensä Margon, Edithin ja Agnesin sekä aina arvaamattomien kätyrien kera. Elokuvassa Itse ilkimys 3 Gru saa tietää, että hänellä on kauan kateissa ollut lähes identtinen kaksoisveli Dru, ja kohtaa tähän asti pahimman vastustajansa: hillittömän kasaritelkkaritähden nimeltä Balthazar Bratt.\n\nSuomenkielisen ääniversion ohjaus Petri Hanttu. Äänirooleissa Ville Haapasalo (Gru), Ville Haapasalo (Dru), Katja Aakkula (Lucy), Alissa Kovalainen (Agnes), Ofelia Hanttu (Edith), Kristiina Brask (Margo), Carl-Kristian Rundman (Silas), Juha Varis (Balthazar Bratt), Jani Karvinen (Clive), Pekka Autiovuori (Fritz), Leena Uotila (Grun äiti), Luca Elshout (Niko), Sanna-June Hyde (Valerie), Jaajo Linnonmaa (TV-juontaja), Janne Porkka (Mainosääni) sekä Petri Hanttu, Markku Huhtamo, Rauno Ahonen, Ella Pyhältö, Sampo Kovalainen, Tiia-Riikka Vuorinen, Kari Tamminen, Susa Saukko, Aapo Pennanen, Markus Degerman, Elina Kauppila.",
+         "EventURL": "http://www.finnkino.fi/Event/302219/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_micro/DespicableMe3_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_small/DespicableMe3_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_medium/DespicableMe3_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11564/portrait_small/DespicableMe3_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11564/landscape_small/DespicableMe3_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11564/landscape_large/DespicableMe3_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "GaYHN22NYB4",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Ville",
+               "LastName": "Haapasalo"
+            },
+            {
+               "FirstName": "Katja",
+               "LastName": "Aakkula"
+            },
+            {
+               "FirstName": "Kristiina",
+               "LastName": "Brask"
+            },
+            {
+               "FirstName": "Carl-Christian",
+               "LastName": "Rundman"
+            },
+            {
+               "FirstName": "Juha",
+               "LastName": "Varis"
+            }
+         ],
+         "Directors": [
+            {
+               "FirstName": "Pierre",
+               "LastName": "Coffin"
+            },
+            {
+               "FirstName": "Kyle",
+               "LastName": "Balda"
+            }
+         ],
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302221",
+         "Title": "Itse ilkimys 3 - (2D) (orig)",
+         "OriginalTitle": "Despicable Me 3 - (2D) (orig)",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "96",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "7",
+         "RatingLabel": "7",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_7.png",
+         "LocalDistributorName": "Finnkinon teatterilevitys - Universal",
+         "GlobalDistributorName": "Finnkinon teatterilevitys - Universal",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Komedia, Perhe-elokuva, Animaatio",
+         "ShortSynopsis": "Illumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.",
+         "Synopsis": "Originaali englanninkielinen normaaliversio (2D), suom. & ruots. tekstit.\n\nIllumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.\n\nVaikeina aikoina tarvitaan ilkimysmäisiä keinoja. Illumination Entertainmentin uudessa animaatiossa Gru ja hänen tuore vaimonsa Lucy palaavat valkokankaalle tyttäriensä Margon, Edithin ja Agnesin sekä aina arvaamattomien kätyrien kera. Elokuvassa Itse ilkimys 3 Gru saa tietää, että hänellä on kauan kateissa ollut lähes identtinen kaksoisveli Dru, ja kohtaa tähän asti pahimman vastustajansa: hillittömän kasaritelkkaritähden nimeltä Balthazar Bratt.",
+         "EventURL": "http://www.finnkino.fi/Event/302221/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11566/portrait_micro/DespicableMe3_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11566/portrait_small/DespicableMe3_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11566/portrait_medium/DespicableMe3_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11566/portrait_small/DespicableMe3_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11566/landscape_small/DespicableMe3_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11566/landscape_large/DespicableMe3_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "GaYHN22NYB4",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Steve",
+               "LastName": "Carell"
+            },
+            {
+               "FirstName": "Kristen",
+               "LastName": "Wiig"
+            },
+            {
+               "FirstName": "Trey",
+               "LastName": "Parker"
+            },
+            {
+               "FirstName": "Steve",
+               "LastName": "Coogan"
+            },
+            {
+               "FirstName": "Jenny",
+               "LastName": "Slate"
+            },
+            {
+               "FirstName": "Miranda",
+               "LastName": "Cosgrove"
+            },
+            {
+               "FirstName": "Dana",
+               "LastName": "Gaier"
+            },
+            {
+               "FirstName": "Nev",
+               "LastName": "Scharrel"
+            },
+            {
+               "FirstName": "Julie",
+               "LastName": "Andrews"
+            }
+         ],
+         "Directors": [
+            {
+               "FirstName": "Pierre",
+               "LastName": "Coffin"
+            },
+            {
+               "FirstName": "Kyle",
+               "LastName": "Balda"
+            }
+         ],
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302312",
+         "Title": "Itse ilkimys 3 - (2D) (svensk)",
+         "OriginalTitle": "Despicable Me 3 - (2D) (swe)",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "96",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "7",
+         "RatingLabel": "7",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_7.png",
+         "LocalDistributorName": "Finnkinon teatterilevitys",
+         "GlobalDistributorName": "Finnkinon teatterilevitys - Universal",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Komedia, Perhe-elokuva, Animaatio, Svenskt tal",
+         "ShortSynopsis": "Illumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.",
+         "Synopsis": "Ruotsiksi puhuttu normaaliversio (2D).\n\nIllumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.\n\nVaikeina aikoina tarvitaan ilkimysmäisiä keinoja. Illumination Entertainmentin uudessa animaatiossa Gru ja hänen tuore vaimonsa Lucy palaavat valkokankaalle tyttäriensä Margon, Edithin ja Agnesin sekä aina arvaamattomien kätyrien kera. Elokuvassa Itse ilkimys 3 Gru saa tietää, että hänellä on kauan kateissa ollut lähes identtinen kaksoisveli Dru, ja kohtaa tähän asti pahimman vastustajansa: hillittömän kasaritelkkaritähden nimeltä Balthazar Bratt.",
+         "EventURL": "http://www.finnkino.fi/Event/302312/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11657/portrait_micro/DespicableMe3_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11657/portrait_small/DespicableMe3_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11657/portrait_medium/DespicableMe3_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11657/portrait_small/DespicableMe3_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11657/landscape_small/DespicableMe3_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11657/landscape_large/DespicableMe3_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "GaYHN22NYB4",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [],
+         "Directors": [
+            {
+               "FirstName": "Pierre",
+               "LastName": "Coffin"
+            },
+            {
+               "FirstName": "Kyle",
+               "LastName": "Balda"
+            }
+         ],
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302218",
+         "Title": "Itse ilkimys 3 - 3D (dub)",
+         "OriginalTitle": "Despicable Me 3 - 3D (dub)",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "96",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "7",
+         "RatingLabel": "7",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_7.png",
+         "LocalDistributorName": "Finnkinon teatterilevitys",
+         "GlobalDistributorName": "Finnkinon teatterilevitys - Universal",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Komedia, Perhe-elokuva, Animaatio, 3D",
+         "ShortSynopsis": "Illumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.",
+         "Synopsis": "Suomeksi puhuttu 3D-versio.\n\nIllumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.\n\nVaikeina aikoina tarvitaan ilkimysmäisiä keinoja. Illumination Entertainmentin uudessa animaatiossa Gru ja hänen tuore vaimonsa Lucy palaavat valkokankaalle tyttäriensä Margon, Edithin ja Agnesin sekä aina arvaamattomien kätyrien kera. Elokuvassa Itse ilkimys 3 Gru saa tietää, että hänellä on kauan kateissa ollut lähes identtinen kaksoisveli Dru, ja kohtaa tähän asti pahimman vastustajansa: hillittömän kasaritelkkaritähden nimeltä Balthazar Bratt.\n\nSuomenkielisen ääniversion ohjaus Petri Hanttu. Äänirooleissa Ville Haapasalo (Gru & Dru), Katja Aakkula (Lucy), Alissa Kovalainen (Agnes), Ofelia Hanttu (Edith), Kristiina Brask (Margo), Carl-Kristian Rundman (Silas), Juha Varis (Balthazar Bratt), Jani Karvinen (Clive), Pekka Autiovuori (Fritz), Leena Uotila (Grun äiti), Luca Elshout (Niko), Sanna-June Hyde (Valerie), Jaajo Linnonmaa (TV-juontaja), Janne Porkka (Mainosääni) sekä Petri Hanttu, Markku Huhtamo, Rauno Ahonen, Ella Pyhältö, Sampo Kovalainen, Tiia-Riikka Vuorinen, Kari Tamminen, Susa Saukko, Aapo Pennanen, Markus Degerman, Elina Kauppila.",
+         "EventURL": "http://www.finnkino.fi/Event/302218/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_micro/DespicableMe3_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_small/DespicableMe3_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_medium/DespicableMe3_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11563/portrait_small/DespicableMe3_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11563/landscape_small/DespicableMe3_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11563/landscape_large/DespicableMe3_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "GaYHN22NYB4",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Ville",
+               "LastName": "Haapasalo"
+            },
+            {
+               "FirstName": "Katja",
+               "LastName": "Aakkula"
+            },
+            {
+               "FirstName": "Kristiina",
+               "LastName": "Brask"
+            },
+            {
+               "FirstName": "Carl-Christian",
+               "LastName": "Rundman"
+            },
+            {
+               "FirstName": "Juha",
+               "LastName": "Varis"
+            }
+         ],
+         "Directors": [
+            {
+               "FirstName": "Pierre",
+               "LastName": "Coffin"
+            },
+            {
+               "FirstName": "Kyle",
+               "LastName": "Balda"
+            }
+         ],
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302220",
+         "Title": "Itse ilkimys 3 - 3D (orig)",
+         "OriginalTitle": "Despicable Me 3 - 3D (orig)",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "96",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "7",
+         "RatingLabel": "7",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_7.png",
+         "LocalDistributorName": "Finnkinon teatterilevitys",
+         "GlobalDistributorName": "Finnkinon teatterilevitys - Universal",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Komedia, Perhe-elokuva, Animaatio, 3D",
+         "ShortSynopsis": "Illumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.",
+         "Synopsis": "Originaali englanninkielinen 3D-versio, suom. & ruots. tekstit.\n\nIllumination toi valkokankaalle Itse ilkimys -elokuvan vuonna 2010 ja vuosina 2013 ja 2015 animaatiohitit Itse ilkimys 2 ja Kätyrit. Kesällä 2017 tarinalle on tiedossa jatkoa. Koko perheen suosikkielokuvan jatko-osassa Itse ilkimys 3:ssa seikkailevat Gru ja Lucy, heidän ihastuttavat tyttärensä Margo, Edith ja Agnes sekä tietysti Kätyrit.\n\nVaikeina aikoina tarvitaan ilkimysmäisiä keinoja. Illumination Entertainmentin uudessa animaatiossa Gru ja hänen tuore vaimonsa Lucy palaavat valkokankaalle tyttäriensä Margon, Edithin ja Agnesin sekä aina arvaamattomien kätyrien kera. Elokuvassa Itse ilkimys 3 Gru saa tietää, että hänellä on kauan kateissa ollut lähes identtinen kaksoisveli Dru, ja kohtaa tähän asti pahimman vastustajansa: hillittömän kasaritelkkaritähden nimeltä Balthazar Bratt.",
+         "EventURL": "http://www.finnkino.fi/Event/302220/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11565/portrait_micro/DespicableMe3_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11565/portrait_small/DespicableMe3_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11565/portrait_medium/DespicableMe3_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11565/portrait_small/DespicableMe3_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11565/landscape_small/DespicableMe3_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11565/landscape_large/DespicableMe3_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "GaYHN22NYB4",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Steve",
+               "LastName": "Carell"
+            },
+            {
+               "FirstName": "Kristen",
+               "LastName": "Wiig"
+            },
+            {
+               "FirstName": "Trey",
+               "LastName": "Parker"
+            },
+            {
+               "FirstName": "Steve",
+               "LastName": "Coogan"
+            },
+            {
+               "FirstName": "Jenny",
+               "LastName": "Slate"
+            },
+            {
+               "FirstName": "Miranda",
+               "LastName": "Cosgrove"
+            },
+            {
+               "FirstName": "Dana",
+               "LastName": "Gaier"
+            },
+            {
+               "FirstName": "Nev",
+               "LastName": "Scharrel"
+            },
+            {
+               "FirstName": "Julie",
+               "LastName": "Andrews"
+            }
+         ],
+         "Directors": [
+            {
+               "FirstName": "Pierre",
+               "LastName": "Coffin"
+            },
+            {
+               "FirstName": "Kyle",
+               "LastName": "Balda"
+            }
+         ],
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302191",
+         "Title": "MET kesäencore: Carmen",
+         "OriginalTitle": "MET summer encore: Carmen",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "180",
+         "dtLocalRelease": "2017-07-12T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "The Metropolitan Opera",
+         "GlobalDistributorName": "The Metropolitan Opera",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Ooppera, Kesäencore, Event cinema",
+         "ShortSynopsis": "Carmen, yksi kaikkien aikojen suosituimmista oopperoista, kertoo \"seksistä, väkivallasta ja rasismista - sekä vapaudesta\", sanoo Olivier-palkittu ohjaaja Richard Eyre produktiostaan Bizet’n draamasta. \"Se on kiistatta yksi suurista taideteoksista. Se on seksikäs, joka suhteessa.",
+         "Synopsis": "Georges Bizet: Carmen\n\nKeskiviikkona 12.7.2017 klo 19 (kaudelta 2009-2010)\n\nCarmen, yksi kaikkien aikojen suosituimmista oopperoista, kertoo \"seksistä, väkivallasta ja rasismista - sekä vapaudesta\", sanoo Olivier-palkittu ohjaaja Richard Eyre produktiostaan Bizet’n draamasta. \"Se on kiistatta yksi suurista taideteoksista. Se on seksikäs, joka suhteessa. Ja uskon, että sen pitää shokeerata”. Elina Garanca tekee nimiroolin viettelevänä mustalaisena, ja Roberto Alagna laulaa pakkomielteisen Don Josén roolin.\n \nKapellimestari Yannick Nézet-Séguin, ohjaus Richard Eyre\nRooleissa mm. Elina Garanca, Roberto Alagna, Barbara Frittoli, Teddy Tahu Rhodes\n\nKesto n. 3 h, sis. yhden väliajan (10 min). Englanninkielinen tekstitys.",
+         "EventURL": "http://www.finnkino.fi/Event/302191/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_micro/1704_Carmen_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_small/1704_Carmen_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_medium/1704_Carmen_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11536/portrait_small/1704_Carmen_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11536/landscape_small/1704_Carmen_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11536/landscape_large/1704_Carmen_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302189",
+         "Title": "MET kesäencore: Helmenkalastajat",
+         "OriginalTitle": "MET summer encore: Les Pecheurs de Perles",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "133",
+         "dtLocalRelease": "2017-06-28T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "The Metropolitan Opera",
+         "GlobalDistributorName": "The Metropolitan Opera",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Ooppera, Kesäencore, Event cinema",
+         "ShortSynopsis": "Eksottisessa Ceylonissa tapahtuva Helmenkalastajat on Georges Bizet'n toinen ohjelmistoon vakiintunut ooppera. Sitä ei ole jostain syystä koskaan nähty Suomen kansallisoopperassa, mutta tenori Jussi Björling on tehnyt tunnetuiksi ja rakastetuiksi Je crois entendre encore -aarian sekä Nadirin ja Zurgan dueton Au fond du temple saint.",
+         "Synopsis": "Georges Bizet: Helmenkalastajat\n\nKeskiviikkona 28.6.2017 klo 19 (kaudelta 2015-16)\n\nEksottisessa Ceylonissa tapahtuva Helmenkalastajat on Georges Bizet'n toinen ohjelmistoon vakiintunut ooppera. Sitä ei ole jostain syystä koskaan nähty Suomen kansallisoopperassa, mutta tenori Jussi Björling on tehnyt tunnetuiksi ja rakastetuiksi Je crois entendre encore -aarian sekä Nadirin ja Zurgan dueton Au fond du temple saint. Niitä voi nyt ihailla Metropolitan-oopperan vakiokasvoihin kuuluvien tenori Matthew Polenzanin ja baritoni Mariusz Kwiecienin laulamana. Nousujohteista kansainvälistä uraa tekevä koloratuurisopraano Diana Damrau täydentää tähtikaartin. Doctor Atomic on elokuvaohjaajana meritoituneen Penny Woolcockin edellinen Metropolitan-oopperan ohjaus. Meilläkin vieraillut Gianandrea Noseda johtaa teoksen.\n \nKapellimestari Gianandrea Noseda, ohjaus Penny Woolcock\nRooleissa mm. Diana Damrau, Matthew Polenzani, Mariusz Kwiecien, Nicolas Testé\n\nKesto n. 2 h 13 min, sis. yhden väliajan (10 min). Englanninkielinen tekstitys.\n\nHuom. Tampereen Plevnan esitys on siirretty lamppuremontin vuoksi salista 7 saliin 6. Kaikki lipun ostaneet saavat salin ovella vaihdettua lippunsa mahdollisimman vastaaviin paikkoihin tässä hieman isommassa salissa.",
+         "EventURL": "http://www.finnkino.fi/Event/302189/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_micro/1702_LesPecheursDePerles_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_small/1702_LesPecheursDePerles_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_medium/1702_LesPecheursDePerles_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11534/portrait_small/1702_LesPecheursDePerles_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11534/landscape_small/1702_LesPecheursDePerles_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11534/landscape_large/1702_LesPecheursDePerles_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302190",
+         "Title": "MET kesäencore: Macbeth",
+         "OriginalTitle": "MET summer encore: Macbeth",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "147",
+         "dtLocalRelease": "2017-07-05T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "The Metropolitan Opera",
+         "GlobalDistributorName": "The Metropolitan Opera",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Ooppera, Kesäencore, Event cinema",
+         "ShortSynopsis": "William Shakespearen näytelmään pohjautuva ooppera pahuuden kehittymisestä ja vallan sokaisevasta vaikutuksesta on suomalaisyleisölle hyvinkin tuttu Savonlinnan oopperajuhlilta. Sopraano Anna Netrebko lauloi vuonna 2014 Lady Macbethin roolin ensimmäistä kertaa urallaan, ensin kesä-heinäkuussa Baijerin valtionoopperassa ja syksyllä Metissä.",
+         "Synopsis": "​Giuseppe Verdi: Macbeth\n\nKeskiviikkona 5.7.2017 klo 19 (kaudelta 2014-2015)\n\nWilliam Shakespearen näytelmään pohjautuva ooppera pahuuden kehittymisestä ja vallan sokaisevasta vaikutuksesta on suomalaisyleisölle hyvinkin tuttu Savonlinnan oopperajuhlilta. Sopraano Anna Netrebko lauloi vuonna 2014 Lady Macbethin roolin ensimmäistä kertaa urallaan, ensin kesä-heinäkuussa Baijerin valtionoopperassa ja syksyllä Metissä. Suomessa konsertoinut tenori Joseph Calleja nähdään Macduffina. Baritoni Željko Lučić laulaa nimiroolin. Basso René Pape täydentää huippulaulajien tähtikaartin Banquona.\n\nKapellimestari Fabio Luisi, ohjaus Adrian Noble, lavastus Mark Thompson, puvut Mark Thompson, valot Jean Kalman, koreografia Sue Lefton\nRooleissa Anna Netrebko (Lady Macbeth), Željko Lucic (Macbeth), Joseph Calleja (Macduff), René Pape (Banquo)\n\nKesto n. 2 h 27 min, sis. yhden väliajan (10 min). Englanninkielinen tekstitys.",
+         "EventURL": "http://www.finnkino.fi/Event/302190/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_micro/1703_Macbeth_1080z.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_small/1703_Macbeth_1080z.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_medium/1703_Macbeth_1080z.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11535/portrait_small/1703_Macbeth_1080z.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11535/landscape_small/1703_Macbeth_444v.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11535/landscape_large/1703_Macbeth_670v.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302270",
+         "Title": "Moonwalker",
+         "OriginalTitle": "Moonwalker",
+         "ProductionYear": "1988",
+         "LengthInMinutes": "93",
+         "dtLocalRelease": "2017-06-28T00:00:00",
+         "Rating": "12",
+         "RatingLabel": "12",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_12.png",
+         "LocalDistributorName": "Park Circus Limited",
+         "GlobalDistributorName": "Park Circus Limited",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Fantasia, Musiikki, Event cinema",
+         "ShortSynopsis": "Anthology movie by, and starring, Michael Jackson in his prime, combining a number of music videos from his bestselling \"Bad\" album with a fantasy tale of Michael's confrontation with a ruthless drug dealer known as Mr. Big (Joe Pesci). Elokuva on englanninkielinen; ei tekstitystä.",
+         "Synopsis": "Kesäleffa-esitys keskiviikkona 28.6.!\n\nAnthology movie by, and starring, Michael Jackson in his prime, combining a number of music videos from his bestselling \"Bad\" album with a fantasy tale of Michael's confrontation with a ruthless drug dealer known as Mr. Big (Joe Pesci).\n\nElokuva on englanninkielinen; ei tekstitystä.",
+         "EventURL": "http://www.finnkino.fi/Event/302270/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_micro/Moonwalker_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_small/Moonwalker_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_medium/Moonwalker_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11615/portrait_small/Moonwalker_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11615/landscape_small/Moonwalker_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11615/landscape_large/Moonwalker_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [
+            {
+               "FirstName": "Jerry",
+               "LastName": "Kramer"
+            },
+            {
+               "FirstName": "Jim",
+               "LastName": "Blashfield"
+            },
+            {
+               "FirstName": "Colin",
+               "LastName": "Chilvers"
+            }
+         ],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302242",
+         "Title": "NT live: Angels in America I: Millennium Approaches",
+         "OriginalTitle": "NT live: Angels in America I: Millennium Approaches",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "225",
+         "dtLocalRelease": "2017-08-21T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "By Experience",
+         "GlobalDistributorName": "By Experience",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Teatteri, Event cinema",
+         "ShortSynopsis": "Amerikka 1980-luvun puolivälissä. Newyorkilaiset painiskelevat elämän ja kuoleman, rakkauden ja seksin, taivaan ja helvetin kysymysten kanssa, keskellä AIDS-kriisiä ja konservatiivista Reaganin hallintoa. Andrew Garfield (Silence, Hacksaw Ridge) esittää priori Walteria (Prior Walter).",
+         "Synopsis": "Tony Kushnerin näytelmä: Angels in America / osa I, Millennium Approaches\n\nMa 21.8. klo 18 (tallennettu 20.7. esityksestä)\n\nAmerikka 1980-luvun puolivälissä. Newyorkilaiset painiskelevat elämän ja kuoleman, rakkauden ja seksin, taivaan ja helvetin kysymysten kanssa, keskellä AIDS-kriisiä ja konservatiivista Reaganin hallintoa.\n\nAndrew Garfield (Silence, Hacksaw Ridge) esittää priori Walteria (Prior Walter). Muissa rooleissa nähdään Denise Gough (People, Places and Things), Nathan Lane (The Producers), James McArdle (Star Wars: The Force Awakens) ja Russell Tovey (The Pass).\n\nTony Kushnerin monia palkintoja voittaneen kaksiosaisen näytelmän uuden näyttämöllepanon on ohjannut Olivier- ja Tony-palkittu ohjaaja Marianne Elliott (The Curious Incident of the Dog in the Night-Time ja War Horse).\n\nKesto n. 3 h 45 min. Englanniksi; myös tekstitys englanniksi.\n\nHuom! Yleisön pyynnöstä Angels in America I ja II esitetään myös Kuopion Scalassa!",
+         "EventURL": "http://www.finnkino.fi/Event/302242/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_micro/NT_AngelsInAmerica1_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_small/NT_AngelsInAmerica1_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_medium/NT_AngelsInAmerica1_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11587/portrait_small/NT_AngelsInAmerica1_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11587/landscape_small/NT_AngelsInAmerica1_444b.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11587/landscape_large/NT_AngelsInAmerica1_670b.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302243",
+         "Title": "NT live: Angels in America II: Perestroika",
+         "OriginalTitle": "NT live: Angels in America II: Perestroika",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "225",
+         "dtLocalRelease": "2017-08-28T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "By Experience",
+         "GlobalDistributorName": "By Experience",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Teatteri, Event cinema",
+         "ShortSynopsis": "Amerikka 1980-luvun puolivälissä. Newyorkilaiset painiskelevat elämän ja kuoleman, rakkauden ja seksin, taivaan ja helvetin kysymysten kanssa, keskellä AIDS-kriisiä ja konservatiivista Reaganin hallintoa. Andrew Garfield (Silence, Hacksaw Ridge) esittää priori Walteria (Prior Walter).",
+         "Synopsis": "Tony Kushnerin näytelmä: Angels in America /osa II, Perestroika\n\nMa 28.8. klo 18 (tallennettu 27.7. esityksestä)\n\nAmerikka 1980-luvun puolivälissä. Newyorkilaiset painiskelevat elämän ja kuoleman, rakkauden ja seksin, taivaan ja helvetin kysymysten kanssa, keskellä AIDS-kriisiä ja konservatiivista Reaganin hallintoa.\n\nAndrew Garfield (Silence, Hacksaw Ridge) esittää priori Walteria (Prior Walter). Muissa rooleissa nähdään Denise Gough (People, Places and Things), Nathan Lane (The Producers), James McArdle (Star Wars: The Force Awakens) ja Russell Tovey (The Pass).\n\nTony Kushnerin monia palkintoja voittaneen kaksiosaisen näytelmän uuden näyttämöllepanon on ohjannut Olivier- ja Tony-palkittu ohjaaja Marianne Elliott (The Curious Incident of the Dog in the Night-Time ja War Horse).\n\nKesto n. 3 h 45 min. Englanniksi; myös tekstitys englanniksi.\n\nHuom! Yleisön pyynnöstä Angels in America I ja II esitetään myös Kuopion Scalassa!",
+         "EventURL": "http://www.finnkino.fi/Event/302243/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_micro/NT_AngelsInAmerica1_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_small/NT_AngelsInAmerica1_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_medium/NT_AngelsInAmerica1_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11588/portrait_small/NT_AngelsInAmerica1_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11588/landscape_small/NT_AngelsInAmerica1_444b.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11588/landscape_large/NT_AngelsInAmerica1_670b.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302241",
+         "Title": "NT live: Salome",
+         "OriginalTitle": "NT live: Salome",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "210",
+         "dtLocalRelease": "2017-08-14T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "By Experience",
+         "GlobalDistributorName": "By Experience",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Teatteri, Event cinema",
+         "ShortSynopsis": "Miehityksen alla autiomaassa elävä kansa. Erämaan radikaali on nälkälakossa. Tyttö, jonka mystinen tanssi muuttaa maailmanhistorian kulun. Latautunut uudelleenkerronta kääntää raamatun pahamaineisen tarinan päälaelleen asettaen Salomeksi kutsumamme tytön vallankumouksen keskiöön.",
+         "Synopsis": "Yaël Farberin näytelmä: Salome\n\nMa 14.8. klo 18.00 (tallennettu 22.6. esityksestä)\n\nTämä tarina on kerrottu aiemminkin, muttei koskaan tällä tavalla.\n\nMiehityksen alla autiomaassa elävä kansa. Erämaan radikaali on nälkälakossa. Tyttö, jonka mystinen tanssi muuttaa maailmanhistorian kulun.\n\nLatautunut uudelleenkerronta kääntää raamatun pahamaineisen tarinan päälaelleen asettaen Salomeksi kutsumamme tytön vallankumouksen keskiöön.\n\nKansainvälistä tunnustusta saanut teatteriohjaaja Yaël Farber (Les Blancs) on ottanut vaikutteita monista lähteistä luodessaan polttavan ajankohtaisen ja hypnoottisen National Theatren ohjauksensa.\n\nKesto n. 3 h 30 min. Englanniksi; myös tekstitys englanniksi.",
+         "EventURL": "http://www.finnkino.fi/Event/302241/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_micro/NT_Salome_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_small/NT_Salome_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_medium/NT_Salome_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11586/portrait_small/NT_Salome_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11586/landscape_small/NT_Salome_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11586/landscape_large/NT_Salome_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302244",
+         "Title": "NT live: Yerma",
+         "OriginalTitle": "NT live: Yerma",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "120",
+         "dtLocalRelease": "2017-09-25T00:00:00",
+         "Rating": "Luok_vap",
+         "RatingLabel": "Luok.vap.",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_Luok.vap..png",
+         "LocalDistributorName": "By Experience",
+         "GlobalDistributorName": "By Experience",
+         "ProductionCompanies": "-",
+         "EventType": "LiveEvent",
+         "Genres": "Teatteri, Event cinema",
+         "ShortSynopsis": "Billie Piper (Penny Dreadful, Great Britain) palaa palkittuun rooliinsa. Lasta epätoivoisesti haluava nuori nainen ajautuu käsittämättömään tekoon Simon Stonen radikaalissa ohjauksessa Lorcan kipeän vahvasta mestariteoksesta. Teatteriesitys, jota ei voi jättää väliin myi katsomot täyteen Young Vic -teatterissa.",
+         "Synopsis": "Federico Garcia Lorcan näytelmä: Yerma\n\nMa 25.9. klo 18 (tallennettu 31.8. esityksestä)\n\nBillie Piper (Penny Dreadful, Great Britain) palaa palkittuun rooliinsa. Lasta epätoivoisesti haluava nuori nainen ajautuu käsittämättömään tekoon Simon Stonen radikaalissa ohjauksessa Lorcan kipeän vahvasta mestariteoksesta. Teatteriesitys, jota ei voi jättää väliin myi katsomot täyteen Young Vic -teatterissa. Kriitikoiden mukaan esitys on ”tavallisen esityksen yläpuolelle nouseva teatteritaiteen voitto” (The Times) sekä ”tyrmäävä, vihlova ja mahdoton jättää näkemättä” (Mail on Sunday). Billie Piperin pääroolin tekemistä nimitetään ”lumoavaksi” (The Evening Standard), ”suuresti vaikuttavaksi” (iNews) sekä ”musertavan vaikuttavaksi” (The Daily Telegraph). Ohjaaja on sijoittanut näytelmän oman aikamme Lontooseen. Piperin roolityö kolmikymppisenä epätoivoisesti lasta haluavana naisena kasvaa alkuvoimaisella vimmalla huikeaan ja järkyttävään kliimaksiin. Esityksessä ei ole väliaikaa.\n\nKesto n. 2 h (ei väliaikaa). Englanniksi; myös tekstitys englanniksi.",
+         "EventURL": "http://www.finnkino.fi/Event/302244/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_micro/NT_Yerma_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_small/NT_Yerma_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_medium/NT_Yerma_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11589/portrait_small/NT_Yerma_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11589/landscape_small/NT_Yerma_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11589/landscape_large/NT_Yerma_670.jpg"
+         },
+         "Videos": [],
+         "Cast": [],
+         "Directors": [],
+         "ContentDescriptors": []
+      },
+      {
+         "ID": "302256",
+         "Title": "Pimeä kasino",
+         "OriginalTitle": "The House",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "89",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "16",
+         "RatingLabel": "16",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_16.png",
+         "LocalDistributorName": "SF Film Finland Oy",
+         "GlobalDistributorName": "SF Film Finland Oy",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Komedia",
+         "ShortSynopsis": "Kun Scott ja Kate Johansen (Will Ferrell ja Amy Poehler) menettävät tyttärensä Alexin lukukausimaksuihin säästetyt rahat, he yrittävät epätoivoisesti tienata säästöt takaisin, jotta Alex voisi toteuttaa unelmansa yliopisto-opinnoista. Naapurinsa Frankin (Jason Mantzoukas) avulla he päättävät perustaa laittoman kasinon.",
+         "Synopsis": "Kun Scott ja Kate Johansen (Will Ferrell ja Amy Poehler) menettävät tyttärensä Alexin lukukausimaksuihin säästetyt rahat, he yrittävät epätoivoisesti tienata säästöt takaisin, jotta Alex voisi toteuttaa unelmansa yliopisto-opinnoista. Naapurinsa Frankin (Jason Mantzoukas) avulla he päättävät perustaa laittoman kasinon.",
+         "EventURL": "http://www.finnkino.fi/Event/302256/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11601/portrait_micro/TheHouse_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11601/portrait_small/TheHouse_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11601/portrait_medium/TheHouse_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11601/portrait_small/TheHouse_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11601/landscape_small/TheHouse_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11601/landscape_large/TheHouse_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "MzW3cYB86uw",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Will",
+               "LastName": "Ferrell"
+            },
+            {
+               "FirstName": "Amy",
+               "LastName": "Poehler"
+            },
+            {
+               "FirstName": "Jason",
+               "LastName": "Mantzoukas"
+            },
+            {
+               "FirstName": "Ryan",
+               "LastName": "Simpkins"
+            }
+         ],
+         "Directors": {
+            "Director": {
+               "FirstName": "Andrew Jay",
+               "LastName": "Cohen"
+            }
+         },
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "SubstanceAbuse",
+               "ImageURL": "https://media.finnkino.fi/images/content_SubstanceAbuse.png"
+            }
+         ]
+      },
+      {
+         "ID": "302246",
+         "Title": "Spider-Man: Homecoming (2D)",
+         "OriginalTitle": "Spider-Man: Homecoming (2D)",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "133",
+         "dtLocalRelease": "2017-07-05T00:00:00",
+         "Rating": "12",
+         "RatingLabel": "12",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_12.png",
+         "LocalDistributorName": "Walt Disney Studios Motion Pictures AB",
+         "GlobalDistributorName": "Walt Disney Studios Motion Pictures AB",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Toiminta, Seikkailu, Sci-fi",
+         "ShortSynopsis": "Nuori Peter Parker/Spider-Man (Tom Holland), joka nähtiin ensi kertaa elokuvassa Captain America: Civil War, totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER-MAN: HOMECOMING. May-tätinsä (Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa.",
+         "Synopsis": "Normaaliversio (2D).\n\nNuori Peter Parker/Spider-Man (Tom Holland), joka nähtiin ensi kertaa elokuvassa Captain America: Civil War, totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER-MAN: HOMECOMING. May-tätinsä (Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa. Uuden mentorinsa Tony Starkin (Robert Downey Jr.) valvovan silmän alla Peterin paluuta tavalliseen arkeen häiritsevät vain hänen haaveensa todistaa olevansa muutakin kuin vain ystävällinen koko naapuruston Spider-Man. Mutta kun Vulture (Michael Keaton) ilmestyy kuvioihin uutena pahiksena, kaikki mikä on Peterille tärkeää joutuu vaaraan.",
+         "EventURL": "http://www.finnkino.fi/Event/302246/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_micro/SpiderManHomecoming_1080t.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_small/SpiderManHomecoming_1080t.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_medium/SpiderManHomecoming_1080t.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11591/portrait_small/SpiderManHomecoming_1080t.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11591/landscape_small/SpiderManHomecoming_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11591/landscape_large/SpiderManHomecoming_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "Oo6RUr0Zzwc",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Tom",
+               "LastName": "Holland"
+            },
+            {
+               "FirstName": "Robert",
+               "LastName": "Downey Jr."
+            },
+            {
+               "FirstName": "Marisa",
+               "LastName": "Tomei"
+            },
+            {
+               "FirstName": "Michael",
+               "LastName": "Keaton"
+            },
+            {
+               "FirstName": "Chris",
+               "LastName": "Evans"
+            },
+            {
+               "FirstName": "Logan",
+               "LastName": "Marshall-Green"
+            },
+            {
+               "FirstName": "Jon",
+               "LastName": "Favreau"
+            }
+         ],
+         "Directors": {
+            "Director": {
+               "FirstName": "Jon",
+               "LastName": "Watts"
+            }
+         },
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302245",
+         "Title": "Spider-Man: Homecoming 3D",
+         "OriginalTitle": "Spider-Man: Homecoming 3D",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "133",
+         "dtLocalRelease": "2017-07-05T00:00:00",
+         "Rating": "12",
+         "RatingLabel": "12",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_12.png",
+         "LocalDistributorName": "Walt Disney Studios Motion Pictures AB",
+         "GlobalDistributorName": "Walt Disney Studios Motion Pictures AB",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Toiminta, Seikkailu, Sci-fi, 3D",
+         "ShortSynopsis": "Nuori Peter Parker/Spider-Man (Tom Holland), joka nähtiin ensi kertaa elokuvassa Captain America: Civil War, totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER-MAN: HOMECOMING. May-tätinsä (Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa.",
+         "Synopsis": "3D-versio.\n\nNuori Peter Parker/Spider-Man (Tom Holland), joka nähtiin ensi kertaa elokuvassa Captain America: Civil War, totuttelee uuteen identiteettiinsä hämähäkinverkkoja viskovana supersankarina elokuvassa SPIDER-MAN: HOMECOMING. May-tätinsä (Marisa Tomei) kanssa asuva Peter palaa kotiin yhä innoissaan kokemuksestaan Avengersien kanssa. Uuden mentorinsa Tony Starkin (Robert Downey Jr.) valvovan silmän alla Peterin paluuta tavalliseen arkeen häiritsevät vain hänen haaveensa todistaa olevansa muutakin kuin vain ystävällinen koko naapuruston Spider-Man. Mutta kun Vulture (Michael Keaton) ilmestyy kuvioihin uutena pahiksena, kaikki mikä on Peterille tärkeää joutuu vaaraan.",
+         "EventURL": "http://www.finnkino.fi/Event/302245/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_micro/SpiderManHomecoming_1080t.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_small/SpiderManHomecoming_1080t.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_medium/SpiderManHomecoming_1080t.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11590/portrait_small/SpiderManHomecoming_1080t.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11590/landscape_small/SpiderManHomecoming_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11590/landscape_large/SpiderManHomecoming_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "Oo6RUr0Zzwc",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Tom",
+               "LastName": "Holland"
+            },
+            {
+               "FirstName": "Robert",
+               "LastName": "Downey Jr."
+            },
+            {
+               "FirstName": "Marisa",
+               "LastName": "Tomei"
+            },
+            {
+               "FirstName": "Michael",
+               "LastName": "Keaton"
+            },
+            {
+               "FirstName": "Chris",
+               "LastName": "Evans"
+            },
+            {
+               "FirstName": "Logan",
+               "LastName": "Marshall-Green"
+            },
+            {
+               "FirstName": "Jon",
+               "LastName": "Favreau"
+            }
+         ],
+         "Directors": {
+            "Director": {
+               "FirstName": "Jon",
+               "LastName": "Watts"
+            }
+         },
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      },
+      {
+         "ID": "302251",
+         "Title": "Viraali",
+         "OriginalTitle": "Viraali",
+         "ProductionYear": "2017",
+         "LengthInMinutes": "111",
+         "dtLocalRelease": "2017-06-30T00:00:00",
+         "Rating": "12",
+         "RatingLabel": "12",
+         "RatingImageUrl": "https://media.finnkino.fi/images/rating_large_12.png",
+         "LocalDistributorName": "Black Lion Pictures Oy",
+         "GlobalDistributorName": "Black Lion Pictures Oy",
+         "ProductionCompanies": "-",
+         "EventType": "Movie",
+         "Genres": "Draama, Jännitys, Kotimainen",
+         "ShortSynopsis": "Viraali on episodielokuva, jonka tarina kuvaa useamman ikäpolven edustajia törmäyskursseilla itsensä ja toistensa kanssa. Nuori Janne haaveilee rap-urasta, mutta joutuu kohtaamaan uran alkuvaiheen haasteet. Samaan aikaan poliisi rakastuu muusikkoon, jolla puolestaan on lupaava kansainvälinen ura edessään.",
+         "Synopsis": "Viraali on episodielokuva, jonka tarina kuvaa useamman ikäpolven edustajia törmäyskursseilla itsensä ja toistensa kanssa.\n\nNuori Janne haaveilee rap-urasta, mutta joutuu kohtaamaan uran alkuvaiheen haasteet. Samaan aikaan poliisi rakastuu muusikkoon, jolla puolestaan on lupaava kansainvälinen ura edessään. Kodinelektroniikkaliikkeessä työskentelevä Mika päätyy rikollisille teille, kun huomaa nykytekniikan tarjoamat uudet mahdollisuudet. Syöpäpotilas Maarit ja pankkiirina työskentelevä Harry tapaavat kymmenen vuotta avioliittonsa päättymisen jälkeen.\n\nElokuvan tarinat lomittuvat ja lopulta kaikki ovat yhteydessä toisiinsa, kun elämän perusmekanismit toistuvat niin pienissä kuin suurissa asioissa. Tekojemme vaikutukset leviävät ja koskettavat aina jotakuta myös fyysisesti, vaikka toimemme tapahtuisivatkin virtuaalimaailmassa.",
+         "EventURL": "http://www.finnkino.fi/Event/302251/",
+         "Images": {
+            "EventMicroImagePortrait": "http://media.finnkino.fi/1012/Event_11596/portrait_micro/Viraali_1080.jpg",
+            "EventSmallImagePortrait": "http://media.finnkino.fi/1012/Event_11596/portrait_small/Viraali_1080.jpg",
+            "EventMediumImagePortrait": "http://media.finnkino.fi/1012/Event_11596/portrait_medium/Viraali_1080.jpg",
+            "EventLargeImagePortrait": "http://media.finnkino.fi/1012/Event_11596/portrait_small/Viraali_1080.jpg",
+            "EventSmallImageLandscape": "http://media.finnkino.fi/1012/Event_11596/landscape_small/Viraali_444.jpg",
+            "EventLargeImageLandscape": "http://media.finnkino.fi/1012/Event_11596/landscape_large/Viraali_670.jpg"
+         },
+         "Videos": {
+            "EventVideo": {
+               "Title": "Katso traileri",
+               "Location": "44jeak1R_mw",
+               "ThumbnailLocation": [],
+               "MediaResourceSubType": "EventTrailer",
+               "MediaResourceFormat": "YouTubeVideo"
+            }
+         },
+         "Cast": [
+            {
+               "FirstName": "Frans",
+               "LastName": "Isotalo"
+            },
+            {
+               "FirstName": "Saga",
+               "LastName": "Sarkola"
+            },
+            {
+               "FirstName": "Vili",
+               "LastName": "Korteniemi"
+            },
+            {
+               "FirstName": "Mika",
+               "LastName": "Melender"
+            },
+            {
+               "FirstName": "Visa",
+               "LastName": "Sarparanta"
+            },
+            {
+               "FirstName": "Anne",
+               "LastName": "Polvi"
+            },
+            {
+               "FirstName": "Jessica",
+               "LastName": "Wolff"
+            },
+            {
+               "FirstName": "Roope",
+               "LastName": "Salminen"
+            },
+            {
+               "FirstName": "Karri \"Paleface\"",
+               "LastName": "Miettinen"
+            }
+         ],
+         "Directors": {
+            "Director": {
+               "FirstName": "Thomas",
+               "LastName": "Laine"
+            }
+         },
+         "ContentDescriptors": [
+            {
+               "Name": "Violence",
+               "ImageURL": "https://media.finnkino.fi/images/content_Violence.png"
+            },
+            {
+               "Name": "Disturbing",
+               "ImageURL": "https://media.finnkino.fi/images/content_Disturbing.png"
+            }
+         ]
+      }
+   ]
 }
