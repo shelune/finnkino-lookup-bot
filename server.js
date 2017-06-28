@@ -205,11 +205,10 @@ function findMovie(sender, name) {
     resultEvent = _.find(events, function (event) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     })
-    /*
+
     if (resultEvent) {
       return resultEvent;
     } else {
-
       request.get({
         uri: urlEvents,
         baseUrl: baseUrl,
@@ -224,13 +223,10 @@ function findMovie(sender, name) {
         });
         let events = resultJSON.Events.Event;
         resultEvent = _.find(events, function (event) {
-          return _.includes(event.Title, name);
+          return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
         })
       })
-
     }
-    */
-
     console.log(`... Requested to find: ${name} ...`);
 
   }, function (error) {
