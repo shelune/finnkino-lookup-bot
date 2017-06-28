@@ -279,7 +279,7 @@ function sendDetail(sender) {
         'template_type': 'generic',
         'elements': [
           'title': resultEvent.Title,
-          'image_url'; resultEvent.Images.EventMediumImagePortrait,
+          'image_url': resultEvent.Images.EventMediumImagePortrait,
           'subtitle': `Length: ${resultEvent.LengthInMinutes} minutes. Rating: ${resultEvent.Rating}`,
           'default_action': {
             'type': 'web_url',
