@@ -190,19 +190,17 @@ function findMovie(sender, name) {
       listType: 'ComingSoon',
       area: areaCode.length == 4 ? areaCode : '1002'
     }
-  })
-  .then(function(body) {
+  }).then(function(body) {
     const result = body;
     let resultJSON = xmlParser.toJson(result, {
       object: true
     });
     let events = resultJSON.Events.Event;
-    resultEvent = _.find(events, function (event) {
+    return _.find(events, function (event) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     })
-  }, function (error) {})
-  .then(function (body) {
-    if (!resultEvent) {
+  }).then(function (result) {
+    if (!result) {
       request.get({
         uri: urlEvents,
         baseUrl: baseUrl,
@@ -223,8 +221,7 @@ function findMovie(sender, name) {
         })
       })
     }
-  }, function(error) {})
-  .then(function () {
+  }).then(function () {
     console.log(`... Requested to find: ${name} ...`);
     console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
     let message = {};
@@ -264,7 +261,10 @@ function findMovie(sender, name) {
             console.log('Error: ', response.body.error)
         }
     });
+  }).catch(function (error) {
+    console.log('error', error);
   });
+
 }
 
 function sendDetail(sender) {
