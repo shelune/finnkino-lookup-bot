@@ -182,7 +182,57 @@ function sendHelp(sender) {
 }
 
 function findMovie(sender, name) {
-  request.get({
+  let resultPromise = searchNowTheaters(name)
+    .then(searchComingSoon(name))
+    .catch(function (error) {
+      console.log('promise error: ', error);
+    })
+    .finally(function (final) {
+      console.log(`... Requested to find: ${name} ...`);
+      console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
+      /*
+      if (resultEvent) {
+        message = {
+          'attachment': {
+            'type': 'template',
+            'payload': {
+              'template_type': 'button',
+              'text': `Are you searching for '${resultEvent.Title}'? \nIt's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}.\n${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
+              'buttons': [
+                {
+                 'type': 'web_url',
+                 'url': resultEvent.EventURL,
+                 'title': 'Go to event'
+                }
+              ]
+            }
+          }
+        }
+      } else {
+        message = {text: `I cannot find any event with [${name}] in it. Try another one then!`}
+      }
+
+      request({
+          url: 'https://graph.facebook.com/v2.8/me/messages',
+          qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+          method: 'POST',
+          json: {
+              recipient: {id: sender},
+              message: message,
+          }
+      }, function(error, response, body) {
+          if (error) {
+              console.log('Error sending messages: ', error)
+          } else if (response.body.error) {
+              console.log('Error: ', response.body.error)
+          }
+      });
+      */
+    })
+}
+
+function searchComingSoon(name) {
+  return request.get({
     uri: urlEvents,
     baseUrl: baseUrl,
     json: true,
@@ -196,75 +246,31 @@ function findMovie(sender, name) {
       object: true
     });
     let events = resultJSON.Events.Event;
-    return _.find(events, function (event) {
+    resultEvent = _.find(events, function (event) {
+      return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
+    });
+  })
+}
+
+function searchNowTheaters(name) {
+  return request.get({
+    uri: urlEvents,
+    baseUrl: baseUrl,
+    json: true,
+    qs: {
+      area: areaCode.length == 4 ? areaCode : '1002',
+    }
+  }).then(function(body) {
+    const result = body;
+    let resultJSON = xmlParser.toJson(result, {
+      object: true
+    });
+    let events = resultJSON.Events.Event;
+    resultEvent = _.find(events, function (event) {
+      console.log('NOW IN THEATER TITLES: ', event.Title);
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     })
-  }).then(function (result) {
-    if (!result) {
-      request.get({
-        uri: urlEvents,
-        baseUrl: baseUrl,
-        json: true,
-        qs: {
-          area: areaCode.length == 4 ? areaCode : '1002',
-        }
-      })
-      .then(function(body) {
-        const result = body;
-        let resultJSON = xmlParser.toJson(result, {
-          object: true
-        });
-        let events = resultJSON.Events.Event;
-        resultEvent = _.find(events, function (event) {
-          console.log('NOW IN THEATER TITLES: ', event.Title);
-          return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
-        })
-      })
-    }
-  }).then(function (result) {
-    console.log(`... Requested to find: ${name} ...`);
-    console.log(`Result: ${JSON.stringify(result, null, 4)}`);
-    let message = {};
-    if (result) {
-      message = {
-        'attachment': {
-          'type': 'template',
-          'payload': {
-            'template_type': 'button',
-            'text': `Are you searching for !`,
-            'buttons': [
-              {
-               'type': 'web_url',
-               'url': resultEvent.EventURL,
-               'title': 'Go to event'
-              }
-            ]
-          }
-        }
-      }
-    } else {
-      message = {text: `I cannot find any event with [${name}] in it. Try another one then!`}
-    }
-
-    request({
-        url: 'https://graph.facebook.com/v2.8/me/messages',
-        qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
-        method: 'POST',
-        json: {
-            recipient: {id: sender},
-            message: message,
-        }
-    }, function(error, response, body) {
-        if (error) {
-            console.log('Error sending messages: ', error)
-        } else if (response.body.error) {
-            console.log('Error: ', response.body.error)
-        }
-    });
-  }).catch(function (error) {
-    console.log('error', error);
-  });
-
+  })
 }
 
 function sendDetail(sender) {
