@@ -278,22 +278,24 @@ function sendDetail(sender) {
       'payload': {
         'template_type': 'generic',
         'elements': [
-          'title': resultEvent.Title,
-          'image_url': resultEvent.Images.EventMediumImagePortrait,
-          'subtitle': `Length: ${resultEvent.LengthInMinutes} minutes. Rating: ${resultEvent.Rating}`,
-          'default_action': {
-            'type': 'web_url',
-            'url': resultEvent.EventURL,
-            'messenger_extensions': true,
-            'webview_height_ratio': 'tall',
-            'fallback_url': 'http://www.finnkino.fi/'
-          }
-        ]
-        'buttons':[
           {
-            'type':'web_url',
-            'url': resultEvent.EventURL,
-            'title': 'Go to event!'
+            'title': resultEvent.Title,
+            'image_url': resultEvent.Images.EventMediumImagePortrait,
+            'subtitle': `Length: ${resultEvent.LengthInMinutes} minutes. Rating: ${resultEvent.Rating}`,
+            'default_action': {
+              'type': 'web_url',
+              'url': resultEvent.EventURL,
+              'messenger_extensions': true,
+              'webview_height_ratio': 'tall',
+              'fallback_url': 'http://www.finnkino.fi/'
+            },
+            'buttons':[
+              {
+                'type':'web_url',
+                'url': resultEvent.EventURL,
+                'title': 'Go to event!'
+              }
+            ]
           }
         ]
       }
