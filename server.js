@@ -206,6 +206,7 @@ function findMovie(sender, name) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     })
 
+  }.then(function (body) {
     if (!resultEvent) {
       request.get({
         uri: urlEvents,
@@ -226,12 +227,8 @@ function findMovie(sender, name) {
         })
       })
     }
-
-    console.log(`... Requested to find: ${name} ...`);
-
-  }, function (error) {
-
   }).finally(function () {
+    console.log(`... Requested to find: ${name} ...`);
     console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
     let message = {};
     if (resultEvent) {
