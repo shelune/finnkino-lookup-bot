@@ -102,7 +102,7 @@ app.post('/webhook/', function (req, res) {
             movieNameRequest = _.trim(_.toLower(text));
 
             if (movieNameRequest) {
-              sendMovieSchedule(sender, movieNameRequest);
+              findMovie(sender, movieNameRequest);
             }
           }
 
@@ -163,35 +163,6 @@ function sendTextMessage(sender, text) {
   })
 }
 
-function sendEventList(sender) {
-  let messageData = {};
-  console.log('area code: ', areaCode);
-  request.get({
-    uri: urlEvents,
-    baseUrl: baseUrl,
-    json: true,
-    qs: {
-      listType: 'ComingSoon',
-      area: areaCode.length == 4 ? areaCode : '1002',
-      nrOfDays: 14
-    }
-  }).then(function(body) {
-    const result = body;
-    let resultJSON = xmlParser.toJson(result, {
-      object: true
-    });
-    let events = resultJSON.Events.Event;
-    // console.log('result json: ', resultJSON);
-    console.log('- - -  - - - - ');
-  }, function (error) {
-    messageData.text = `Couldn't find the price of that item.`;
-  })
-  //send the result message with prices
-  .finally(function () {
-    sendTextMessage(sender, 'Operator 6O out.')
-  });
-}
-
 function sendHelp(sender) {
   let messageData = {text: commandFind};
   request({
@@ -210,16 +181,10 @@ function sendHelp(sender) {
 }
 
 function sendMovieSchedule(sender, name) {
-  let event = findMovie(name);
-  if (event) {
-    sendTextMessage(sender, `Found event with ${name}`);
-  } else {
-    sendTextMessage(sender, `Did not find event with ${name}`);
-  }
-  console.log('event found: ', event);
+
 }
 
-function findMovie(name) {
+function findMovie(sender, name) {
   let movieFound = false;
 
   request.get({
@@ -238,8 +203,7 @@ function findMovie(name) {
     });
     let events = resultJSON.Events.Event;
     resultEvent = _.find(events, function (event) {
-      console.log('COMING EVENTS TITLES: ', event.Title);
-      return _.includes(event.Title, 'Spider');
+      return _.includes(event.Title, name);
     })
     /*
     if (resultEvent) {
