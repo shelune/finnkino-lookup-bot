@@ -182,6 +182,7 @@ function sendHelp(sender) {
 }
 
 function findMovie(sender, name) {
+  resultEvent = [];
   let resultPromise = searchNowTheaters(name)
     .then(searchComingSoon(name))
     .catch(function (error) {
@@ -208,7 +209,7 @@ function findMovie(sender, name) {
             'type': 'template',
             'payload': {
               'template_type': 'button',
-              'text': `Are you searching for '${eventSample.OriginalTitle}'? \nIt's released on ${moment(eventSample.dtLocalRelease).format('DD/MM/YYYY')}.\n${eventSample.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + eventSample.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
+              'text': `Are you searching for '${eventSample.OriginalTitle}'? \nIt's released on ${moment(eventSample.dtLocalRelease).format('DD/MM/YYYY')}.\n${eventSample.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + eventSample.Videos.EventVideo.Location : ''}. If there're multiple versions, they should all be listed below. Check it out!`,
               'buttons': buttons
             }
           }
