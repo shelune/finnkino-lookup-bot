@@ -230,11 +230,11 @@ function findMovie(sender, name) {
     */
 
     console.log(`... Requested to find: ${name} ...`);
-
+    console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
   }, function (error) {
 
   }).finally(function () {
-    console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
+
     /*
     let message = {
       'attachment': {
