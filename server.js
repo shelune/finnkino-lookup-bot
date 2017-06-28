@@ -104,7 +104,7 @@ app.post('/webhook/', function (req, res) {
 
             if (processedText.startsWith('cmd')) {
               const availableCommands = _.keys(commandCenter);
-              const cmd = processedText.match(/(?<=\bcmd\s)(\w+)/g)[0];
+              const cmd = processedText.match(/(?:cmd | \. )(\w+)/g)[1];
               _.map(availableCommands, function (command) {
                 if (cmd.includes(command)) {
                   commandCenter[`${command}`](sender);
