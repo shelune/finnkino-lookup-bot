@@ -255,7 +255,7 @@ function searchComingSoon(name) {
     });
     console.log('coming soon filtered: ', matchedEvents);
 
-    resultEvent = _.concat(resultEvent, _.matchedEvents);
+    resultEvent = _.concat(resultEvent, matchedEvents);
   })
 }
 
@@ -277,7 +277,7 @@ function searchNowTheaters(name) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     });
 
-    resultEvent = _.concat(resultEvent, _.matchedEvents);
+    resultEvent = _.concat(resultEvent, matchedEvents);
   })
 }
 
