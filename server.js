@@ -201,7 +201,7 @@ function findMovie(sender, name) {
     });
     let events = resultJSON.Events.Event;
     resultEvent = _.find(events, function (event) {
-      return _.includes(event.Title, name);
+      return _.includes(_.toLower(event.Title), name);
     })
     /*
     if (resultEvent) {
@@ -230,11 +230,11 @@ function findMovie(sender, name) {
     */
 
     console.log(`... Requested to find: ${name} ...`);
-    console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
+
   }, function (error) {
 
   }).finally(function () {
-
+    console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
     /*
     let message = {
       'attachment': {
