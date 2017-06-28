@@ -13,9 +13,9 @@ const request = require('request-promise');
 const app = express();
 
 // Const stuff
-const intro = 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. Type "HELP" for the command you can issue!';
-const commandFind = `The first command you can type is FIND (lower or uppercase is just fine). I'll prompt you a question on the name of the movie (in English). Hopefully I can return the movie you want with its event link & date.`;
-const commandBrowse = `Then you can type BROWSE. I'll introduce a list of events available for you within 3 weeks. Then you can find with the provided name. Neat!`
+const intro = 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. Type "cmd help" for the command you can issue!';
+const commandFind = `The first command is "cmd find" (lower or uppercase is just fine). I'll prompt you a question on the name of the movie (in English). Hopefully I can return the movie you want with its event link & date.`;
+const commandBrowse = `Then you can type "cmd browse". I'll introduce a list of events available for you within 3 weeks. Then you can find with the provided name. Neat!`
 
 
 const theaterIds = [
@@ -50,7 +50,7 @@ const commandCenter = {
     });
   },
   'browse': function(sender) {
-
+    console.log('command mode chosen - browse');
   },
   'find': function(sender) {
     console.log('command mode chosen - find');
@@ -97,30 +97,35 @@ app.post('/webhook/', function (req, res) {
         // check first hero name
         if (event.message && event.message.text) {
           let text = event.message.text;
+          const processedText = _.toLower(_.trim(text));
 
           if (saidHello) {
             const processedText = _.toLower(_.trim(text));
-            const availableCommands = _.keys(commandCenter);
-            _.map(availableCommands, function (command) {
-              if (processedText.includes(command)) {
-                commandCenter[`${command}`](sender);
-                commandMode = command;
-              }
-            });
+
+            if (processedText.startsWith('cmd')) {
+              const availableCommands = _.keys(commandCenter);
+              const cmd = processedText.match(/(?<=\bcmd\s)(\w+)/g)[0];
+              _.map(availableCommands, function (command) {
+                if (cmd.includes(command)) {
+                  commandCenter[`${command}`](sender);
+                  commandMode = command;
+                }
+              });
+            }
 
             if (!commandMode) {
               sendTextMessage(sender, 'Operator 6O does not understand this command.');
             }
+
+            if (commandMode == 'find') {
+              movieNameRequest = processedText;
+
+              if (movieNameRequest) {
+                findMovie(sender, movieNameRequest);
+              }
+            }
           } else {
             sayHello(sender);
-          }
-
-          if (commandMode == 'find') {
-            movieNameRequest = _.trim(_.toLower(text));
-
-            if (movieNameRequest) {
-              findMovie(sender, movieNameRequest);
-            }
           }
         }
     }
@@ -237,7 +242,7 @@ function findMovie(sender, name) {
           'type': 'template',
           'payload': {
             'template_type': 'button',
-            'text': `Are you searching for '${resultEvent.Title}'? \nIt's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}. \n ${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
+            'text': `Are you searching for '${resultEvent.Title}'? \nIt's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}.\n${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
             'buttons': [
               {
                'type': 'web_url',
