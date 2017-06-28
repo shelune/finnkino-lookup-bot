@@ -193,6 +193,7 @@ function findMovie(sender, name) {
       console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
 
       if (resultEvent.length > 0) {
+        resultEvent = _.uniqBy(resultEvent, 'ID');
         const events = _.map(resultEvent, function (event) {
           return {'web_url': event.EventURL, 'title': event.OriginalTitle};
         });
@@ -207,7 +208,7 @@ function findMovie(sender, name) {
             'type': 'template',
             'payload': {
               'template_type': 'button',
-              'text': `Are you searching for '${resultEvent.OriginalTitle}'? \nIt's released on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}.\n${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
+              'text': `Are you searching for '${eventSample.OriginalTitle}'? \nIt's released on ${moment(eventSample.dtLocalRelease).format('DD/MM/YYYY')}.\n${eventSample.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + eventSample.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
               'buttons': buttons
             }
           }
