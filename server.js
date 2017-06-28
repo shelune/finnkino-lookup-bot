@@ -63,7 +63,7 @@ let saidHello = false;
 let commandMode = '';
 let areaCode = '1002';
 let movieNameRequest = '';
-let resultEvent = null;
+let resultEvent = [];
 
 const token = "<PAGE_ACCESS_TOKEN>";
 
@@ -192,20 +192,23 @@ function findMovie(sender, name) {
       console.log(`... Requested to find: ${name} ...`);
       console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
 
-      if (resultEvent) {
+      if (resultEvent.length > 0) {
+        const events = _.map(resultEvent, function (event) {
+          return {'web_url': event.EventURL, 'title': event.OriginalTitle};
+        });
+        const eventSample = resultEvent[0];
+        const buttons = _.map(events, function (event) {
+          return {'type': 'web_url', 'url': event.web_url, 'title': event.title}
+        });
+
+        console.log('buttons array: ', buttons);
         message = {
           'attachment': {
             'type': 'template',
             'payload': {
               'template_type': 'button',
-              'text': `Are you searching for '${resultEvent.Title}'? \nIt's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}.\n${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
-              'buttons': [
-                {
-                 'type': 'web_url',
-                 'url': resultEvent.EventURL,
-                 'title': 'Go to event'
-                }
-              ]
+              'text': `Are you searching for '${resultEvent.OriginalTitle}'? \nIt's released on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}.\n${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
+              'buttons': buttons
             }
           }
         }
@@ -243,13 +246,15 @@ function searchComingSoon(name) {
     }
   }).then(function(body) {
     const result = body;
-    let resultJSON = xmlParser.toJson(result, {
+    const resultJSON = xmlParser.toJson(result, {
       object: true
     });
-    let events = resultJSON.Events.Event;
-    resultEvent = _.find(events, function (event) {
+    const events = resultJSON.Events.Event;
+    const matchedEvents = _.find(events, function (event) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     });
+
+    resultEvent = _.concat(resultEvent, _.matchedEvents);
   })
 }
 
@@ -263,13 +268,15 @@ function searchNowTheaters(name) {
     }
   }).then(function(body) {
     const result = body;
-    let resultJSON = xmlParser.toJson(result, {
+    const resultJSON = xmlParser.toJson(result, {
       object: true
     });
-    let events = resultJSON.Events.Event;
-    resultEvent = _.find(events, function (event) {
+    const events = resultJSON.Events.Event;
+    const matchedEvents = _.filter(events, function (event) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
-    })
+    });
+
+    resultEvent = _.concat(resultEvent, _.matchedEvents);
   })
 }
 
