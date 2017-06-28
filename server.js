@@ -36,7 +36,7 @@ const commandCenter = {
   'help': function(sender) {
     let messageData = {text: commandFind};
     request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
+        url: 'https://graph.facebook.com/v2.8/me/messages',
         qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
         method: 'POST',
         json: {
@@ -63,6 +63,7 @@ let saidHello = false;
 let commandMode = '';
 let areaCode = '1002';
 let movieNameRequest = '';
+let resultEvent = null;
 
 const token = "<PAGE_ACCESS_TOKEN>";
 
@@ -194,7 +195,7 @@ function sendEventList(sender) {
 function sendHelp(sender) {
   let messageData = {text: commandFind};
   request({
-      url: 'https://graph.facebook.com/v2.6/me/messages',
+      url: 'https://graph.facebook.com/v2.8/me/messages',
       qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
       method: 'POST',
       json: {
@@ -211,16 +212,15 @@ function sendHelp(sender) {
 function sendMovieSchedule(sender, name) {
   let event = findMovie(name);
   if (event) {
-    sendTextMessage(sender, 'Found event with ', name);
+    sendTextMessage(sender, `Found event with ${name}`);
   } else {
-    sendTextMessage(sender, 'No event found with ', name);
+    sendTextMessage(sender, `Did not find event with ${name}`);
   }
   console.log('event found: ', event);
 }
 
 function findMovie(name) {
   let movieFound = false;
-  let resultEvent = null;
 
   request.get({
     uri: urlEvents,
@@ -268,12 +268,43 @@ function findMovie(name) {
     */
 
     console.log(`... Requested to find: ${name} ...`);
-    console.log(`Result: ${resultEvent}`);
+    console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
 
-    return resultEvent;
   }, function (error) {
     messageData.text = `Couldn't find the price of that item.`;
-  })
+  }).finally(function () {
+    let message = {
+      'attachment': {
+        'type': 'template',
+        'payload': {
+          'template_type': 'button',
+          'text': `Are you searching for ${resultEvent.Title}? \n --- --- --- \n It's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}`,
+          'buttons': [
+            {
+             'type': 'web_url',
+             'url': resultEvent.EventURL,
+             'title': 'Go to event'
+            }
+          ]
+        }
+      }
+    }
+    request({
+        url: 'https://graph.facebook.com/v2.8/me/messages',
+        qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+        method: 'POST',
+        json: {
+            recipient: {id: sender},
+            message: message,
+        }
+    }, function(error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    });
+  });
 }
 
 // Spin up the servurrr!
