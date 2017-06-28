@@ -206,7 +206,7 @@ function findMovie(sender, name) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     })
 
-  }.then(function (body) {
+  }).then(function (body) {
     if (!resultEvent) {
       request.get({
         uri: urlEvents,
