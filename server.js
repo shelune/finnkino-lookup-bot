@@ -13,7 +13,7 @@ const request = require('request-promise');
 const app = express();
 
 // Const stuff
-const intro = 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. You can also do some more stuff with it! Type "HELP" for the command you can issue!';
+const intro = 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. Type "HELP" for the command you can issue!';
 const commandFind = `The first command you can type is FIND (lower or uppercase is just fine). I'll prompt you a question on the name of the movie (in English) & which cinema area you go to. Hopefully I can return the movie you want with its event link & date.`;
 const commandBrowse = `Then you can type BROWSE. I'll introduce a list of events available for you within 3 weeks. Then you can find with the provided name. Neat!`
 
@@ -235,7 +235,7 @@ function findMovie(sender, name) {
 
   }).finally(function () {
     console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
-    /*
+
     let message = {
       'attachment': {
         'type': 'template',
@@ -267,7 +267,7 @@ function findMovie(sender, name) {
             console.log('Error: ', response.body.error)
         }
     });
-    */
+
   });
 }
 
