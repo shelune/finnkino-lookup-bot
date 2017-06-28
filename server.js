@@ -14,7 +14,7 @@ const app = express();
 
 // Const stuff
 const intro = 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. Type "HELP" for the command you can issue!';
-const commandFind = `The first command you can type is FIND (lower or uppercase is just fine). I'll prompt you a question on the name of the movie (in English) & which cinema area you go to. Hopefully I can return the movie you want with its event link & date.`;
+const commandFind = `The first command you can type is FIND (lower or uppercase is just fine). I'll prompt you a question on the name of the movie (in English). Hopefully I can return the movie you want with its event link & date.`;
 const commandBrowse = `Then you can type BROWSE. I'll introduce a list of events available for you within 3 weeks. Then you can find with the provided name. Neat!`
 
 
@@ -180,10 +180,6 @@ function sendHelp(sender) {
   });
 }
 
-function sendMovieSchedule(sender, name) {
-
-}
-
 function findMovie(sender, name) {
   request.get({
     uri: urlEvents,
@@ -191,8 +187,7 @@ function findMovie(sender, name) {
     json: true,
     qs: {
       listType: 'ComingSoon',
-      area: areaCode.length == 4 ? areaCode : '1002',
-      nrOfDays: 14
+      area: areaCode.length == 4 ? areaCode : '1002'
     }
   }).then(function(body) {
     const result = body;
@@ -242,7 +237,7 @@ function findMovie(sender, name) {
           'type': 'template',
           'payload': {
             'template_type': 'button',
-            'text': `Are you searching for ${resultEvent.Title}? \n --- --- --- \n It's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}`,
+            'text': `Are you searching for '${resultEvent.Title}'? \nIt's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}. \n ${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo : ''}. Don't forget to check the event with the link below!`,
             'buttons': [
               {
                'type': 'web_url',
@@ -274,6 +269,36 @@ function findMovie(sender, name) {
     });
 
   });
+}
+
+function sendDetail(sender) {
+  message = {
+    'attachment': {
+      'type': 'template',
+      'payload': {
+        'template_type': 'generic',
+        'elements': [
+          'title': resultEvent.Title,
+          'image_url'; resultEvent.Images.EventMediumImagePortrait,
+          'subtitle': `Length: ${resultEvent.LengthInMinutes} minutes. Rating: ${resultEvent.Rating}`,
+          'default_action': {
+            'type': 'web_url',
+            'url': resultEvent.EventURL,
+            'messenger_extensions': true,
+            'webview_height_ratio': 'tall',
+            'fallback_url': 'http://www.finnkino.fi/'
+          }
+        ]
+        'buttons':[
+          {
+            'type':'web_url',
+            'url': resultEvent.EventURL,
+            'title': 'Go to event!'
+          }
+        ]
+      }
+    }
+  }
 }
 
 // Spin up the servurrr!
