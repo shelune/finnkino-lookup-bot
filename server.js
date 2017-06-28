@@ -253,6 +253,7 @@ function searchComingSoon(name) {
     const matchedEvents = _.filter(events, function (event) {
       return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     });
+    console.log('coming soon filtered: ', matchedEvents);
 
     resultEvent = _.concat(resultEvent, _.matchedEvents);
   })
