@@ -98,14 +98,6 @@ app.post('/webhook/', function (req, res) {
         if (event.message && event.message.text) {
           let text = event.message.text;
 
-          if (commandMode == 'find') {
-            movieNameRequest = _.trim(_.toLower(text));
-
-            if (movieNameRequest) {
-              findMovie(sender, movieNameRequest);
-            }
-          }
-
           if (saidHello) {
             const processedText = _.toLower(_.trim(text));
             const availableCommands = _.keys(commandCenter);
@@ -117,10 +109,18 @@ app.post('/webhook/', function (req, res) {
             });
 
             if (!commandMode) {
-              sendTextMessage(sender, 'Operator 6O does not understand this.');
+              sendTextMessage(sender, 'Operator 6O does not understand this command.');
             }
           } else {
             sayHello(sender);
+          }
+
+          if (commandMode == 'find') {
+            movieNameRequest = _.trim(_.toLower(text));
+
+            if (movieNameRequest) {
+              findMovie(sender, movieNameRequest);
+            }
           }
         }
     }
