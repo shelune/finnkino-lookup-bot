@@ -117,11 +117,13 @@ app.post('/webhook/', function (req, res) {
               sendTextMessage(sender, 'Operator 6O does not understand this command.');
             }
 
-            if (commandMode == 'find') {
-              movieNameRequest = processedText;
+            else {
+              if (commandMode == 'find') {
+                movieNameRequest = processedText;
 
-              if (movieNameRequest) {
-                findMovie(sender, movieNameRequest);
+                if (movieNameRequest) {
+                  findMovie(sender, movieNameRequest);
+                }
               }
             }
           } else {
