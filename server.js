@@ -221,17 +221,17 @@ function findMovie(sender, name) {
         })
       })
     }
-  }).then(function () {
+  }).then(function (result) {
     console.log(`... Requested to find: ${name} ...`);
-    console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
+    console.log(`Result: ${JSON.stringify(result, null, 4)}`);
     let message = {};
-    if (resultEvent) {
+    if (result) {
       message = {
         'attachment': {
           'type': 'template',
           'payload': {
             'template_type': 'button',
-            'text': `Are you searching for '${resultEvent.Title}'? \nIt's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}.\n${resultEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + resultEvent.Videos.EventVideo.Location : ''}. Don't forget to check the event with the link below!`,
+            'text': `Are you searching for !`,
             'buttons': [
               {
                'type': 'web_url',
