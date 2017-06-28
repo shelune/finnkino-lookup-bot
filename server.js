@@ -44,7 +44,7 @@ const commandCenter = {
             message: messageData,
         }
     }).then(function (body) {
-      sendTextMessage(sender, commandBrowse);
+      // sendTextMessage(sender, commandBrowse);
     }, function (err) {
       console.log('error encountered', err);
     });
@@ -106,7 +106,7 @@ app.post('/webhook/', function (req, res) {
               const availableCommands = _.keys(commandCenter);
               const cmd = _.words(processedText)[1];
               _.map(availableCommands, function (command) {
-                if (cmd.includes(command)) {
+                if (cmd == command) {
                   commandCenter[`${command}`](sender);
                   commandMode = command;
                 }
