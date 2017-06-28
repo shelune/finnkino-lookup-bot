@@ -188,6 +188,7 @@ function findMovie(sender, name) {
       console.log('promise error: ', error);
     })
     .finally(function (final) {
+      let message = {};
       console.log(`... Requested to find: ${name} ...`);
       console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
 
@@ -227,7 +228,7 @@ function findMovie(sender, name) {
               console.log('Error: ', response.body.error)
           }
       });
-      
+
     })
 }
 
