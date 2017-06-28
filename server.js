@@ -201,7 +201,7 @@ function findMovie(sender, name) {
     });
     let events = resultJSON.Events.Event;
     resultEvent = _.find(events, function (event) {
-      return _.includes(_.toLower(event.Title), name);
+      return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
     })
     /*
     if (resultEvent) {
@@ -235,23 +235,28 @@ function findMovie(sender, name) {
 
   }).finally(function () {
     console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
-
-    let message = {
-      'attachment': {
-        'type': 'template',
-        'payload': {
-          'template_type': 'button',
-          'text': `Are you searching for ${resultEvent.Title}? \n --- --- --- \n It's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}`,
-          'buttons': [
-            {
-             'type': 'web_url',
-             'url': resultEvent.EventURL,
-             'title': 'Go to event'
-            }
-          ]
+    let message = {};
+    if (resultEvent) {
+      message = {
+        'attachment': {
+          'type': 'template',
+          'payload': {
+            'template_type': 'button',
+            'text': `Are you searching for ${resultEvent.Title}? \n --- --- --- \n It's going to be release on ${moment(resultEvent.dtLocalRelease).format('DD/MM/YYYY')}`,
+            'buttons': [
+              {
+               'type': 'web_url',
+               'url': resultEvent.EventURL,
+               'title': 'Go to event'
+              }
+            ]
+          }
         }
       }
+    } else {
+      message = {text: `I cannot find any event with [${name}] in it. Try another one then!`}
     }
+
     request({
         url: 'https://graph.facebook.com/v2.8/me/messages',
         qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
