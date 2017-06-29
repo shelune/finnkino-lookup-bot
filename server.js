@@ -36,20 +36,7 @@ const urlDates = 'ScheduleDates';
 
 const commandCenter = {
   'help': function(sender) {
-    let messageData = {text: commandFind};
-    request({
-        url: 'https://graph.facebook.com/v2.8/me/messages',
-        qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
-        method: 'POST',
-        json: {
-            recipient: {id: sender},
-            message: messageData,
-        }
-    }).then(function (body) {
-      // sendTextMessage(sender, commandBrowse);
-    }, function (err) {
-      console.log('error encountered', err);
-    });
+    sendHelp(sender);
   },
   'browse': function(sender) {
     console.log('command mode chosen - browse');
