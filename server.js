@@ -27,6 +27,8 @@ const theaterIds = [
   {'Tampere': '1021'}
 ];
 
+const favouriteGenres = 'toiminta, seikkailu, sci-fi, komedia, perhe-elokuva, animaatio, rikoselokuva';
+
 const baseUrl = 'http://www.finnkino.fi/XML/';
 const urlSchedules = 'Schedule';
 const urlEvents = 'Events';
@@ -51,6 +53,7 @@ const commandCenter = {
   },
   'browse': function(sender) {
     console.log('command mode chosen - browse');
+    browseMovie(sender);
   },
   'find': function(sender) {
     console.log('command mode chosen - find');
@@ -165,7 +168,7 @@ function sendTextMessage(sender, text) {
 }
 
 function sendHelp(sender) {
-  let messageData = {text: commandFind};
+  let messageData = {text: commandBrowse};
   request({
       url: 'https://graph.facebook.com/v2.8/me/messages',
       qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
@@ -175,7 +178,7 @@ function sendHelp(sender) {
           message: messageData,
       }
   }).then(function (body) {
-    sendTextMessage(sender, commandBrowse);
+    sendTextMessage(sender, commandFind);
   }, function (err) {
     console.log('error encountered', err);
   });
@@ -195,6 +198,11 @@ function findMovie(sender, name) {
 
       if (resultEvent.length > 0) {
         resultEvent = _.uniqBy(resultEvent, 'ID');
+        if (resultEvent.length > 4) {
+          resultEvent = _.filter(resultEvent, function (event) {
+            return !_.includes(_.toLower(event.Title), 'swe') && !_.includes(_.toLower(event.OriginalTitle), 'swe');
+          });
+        }
         const events = _.map(resultEvent, function (event) {
           return {'web_url': event.EventURL, 'title': event.OriginalTitle};
         });
@@ -233,7 +241,6 @@ function findMovie(sender, name) {
               console.log('Error: ', response.body.error)
           }
       });
-
     })
 }
 
@@ -281,6 +288,51 @@ function searchNowTheaters(name) {
 
     resultEvent = _.concat(resultEvent, matchedEvents);
   })
+}
+
+function browseMovie(sender) {
+  resultEvent = [];
+  let resultPromise = searchNowTheaters('')
+    .then(searchComingSoon(''))
+    .catch(function (error) {
+      console.log('promise error: ', error);
+    })
+    .finally(function (final) {
+      let message = {};
+      console.log(`... Requested to browse ...`);
+      console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
+
+      if (resultEvent.length > 0) {
+        resultEvent = _.uniqBy(resultEvent, 'ID');
+        const events = _.map(resultEvent, function (event) {
+          return {'web_url': event.EventURL, 'title': event.OriginalTitle};
+        });
+
+        message = `Here's the list of event names that I found. 'Cmd find' with your one of your choice!\n- - - - -\n`;
+
+        _.map(_.slice(events, 0, 10), function (event) {
+          message.text += `${event.title}.\n`;
+        });
+      } else {
+        message = {text: `Operator 6O cannot retrieve any event. Probably some problems from the Bunker... Try again after a while!`}
+      }
+
+      request({
+          url: 'https://graph.facebook.com/v2.8/me/messages',
+          qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
+          method: 'POST',
+          json: {
+              recipient: {id: sender},
+              message: message,
+          }
+      }, function(error, response, body) {
+          if (error) {
+              console.log('Error sending messages: ', error)
+          } else if (response.body.error) {
+              console.log('Error: ', response.body.error)
+          }
+      });
+    })
 }
 
 function sendDetail(sender) {
