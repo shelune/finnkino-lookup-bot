@@ -285,7 +285,7 @@ function browseMovie(sender) {
       console.log('promise error: ', error);
     })
     .finally(function (final) {
-      let message = {};
+      let message = {text: ''};
 
       if (resultEvent.length > 0) {
         resultEvent = _.uniqBy(resultEvent, 'ID');
@@ -296,10 +296,10 @@ function browseMovie(sender) {
         console.log(`... Requested to browse ...`);
         console.log(`Result: ${JSON.stringify(resultEvent, null, 4)}`);
 
-        message = `Here's the list of event names that I found. 'Cmd find' with your one of your choice!\n- - - - -\n`;
+        message.text = `Here's the list of event names that I found. 'Cmd find' with your one of your choice!\n- - - - -\n`;
 
         _.map(_.slice(events, 0, 10), function (event) {
-          message += `${event.title}.\n`;
+          message.text += `${event.title}.\n`;
         });
       } else {
         message = {text: `Operator 6O cannot retrieve any event. Probably some problems from the Bunker... Try again after a while!`}
