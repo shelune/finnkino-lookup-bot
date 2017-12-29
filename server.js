@@ -1,8 +1,5 @@
 'use strict'
 
-// Token Generated
-//EAAEIHve3uJsBAFsPJzqM9sqeYK3ehMj47SPEdEgun0w8aKe9cfz1LgIftFNyEhQ7gTQsCarMzZCOLhGRnlqvaTYJQFGshAvSTWsn9YDIghuPR6TkAEvBxYxVYfI3psvfgZAfKQy06cTwkBICmmkMKPIL7nQgF0dOTi5G8gmwZDZD
-
 const qs = require('qs');
 const _ = require('lodash');
 const moment = require('moment');
@@ -11,52 +8,38 @@ const bodyParser = require('body-parser');
 const xmlParser = require('xml2json');
 const request = require('request-promise');
 const app = express();
+const env = require('node-env-file');
+env(__dirname + '/.env');
 
-// Const stuff
-const intro = 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. Type "cmd help" for the command you can issue!';
-const commandFind = `The first command is "cmd find" (lower or uppercase is just fine). I'll prompt you a question on the name of the movie (in English). Hopefully I can return the movie you want with its event link & date.`;
-const commandBrowse = `Then you can type "cmd browse". I'll introduce a list of events available for you within 3 weeks. Then you can find with the provided name. Neat!`
-
-
-const theaterIds = [
-  {'All': '1029'},
-  {'Helsinki': '1002'},
-  {'Espoo': '1012'},
-  {'Vantaa': '1013'},
-  {'Pori': '1019'},
-  {'Tampere': '1021'}
-];
+const {dialog, commands} = require('./const');
+const {sendMessage, somethingWentWrong} = require('./api');
+const {cmdCenter} = require('./pandora');
 
 const favouriteGenres = 'toiminta, seikkailu, sci-fi, komedia, perhe-elokuva, animaatio, rikoselokuva';
 
-const baseUrl = 'http://www.finnkino.fi/XML/';
-const urlSchedules = 'Schedule';
-const urlEvents = 'Events';
-const urlDates = 'ScheduleDates';
-
 const commandCenter = {
-  'help': function(sender) {
+  'help': function (sender) {
     sendHelp(sender);
   },
-  'browse': function(sender) {
+  'browse': function (sender) {
     console.log('command mode chosen - browse');
     browseMovie(sender);
+
   },
-  'find': function(sender) {
+  'find': function (sender) {
     console.log('command mode chosen - find');
     sendTextMessage(sender, 'Operator 6O requires your movie name.');
   }
 }
 
 // flag checks & modifiable stuff
-let saidHello = false;
 let commandMode = '';
 let areaCode = '1002';
 let movieNameRequest = '';
 let resultEvent = [];
+let browseChunk = 0;
 
 const token = "<PAGE_ACCESS_TOKEN>";
-
 app.set('port', (process.env.PORT || 5000));
 
 // Process application/x-www-form-urlencoded
@@ -66,13 +49,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Index route
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
   res.send('Hello! I am a chat bot!');
 });
 
 // Facebook verification
-app.get('/webhook/', function(req, res) {
-  if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
+app.get('/webhook/', function (req, res) {
+  if (req.query['hub.verify_token'] === process.env.FB_VERIFY_TOKEN) {
     res.send(req.query['hub.challenge']);
   }
 
@@ -84,31 +67,14 @@ app.post('/webhook/', function (req, res) {
     for (let i = 0; i < messaging_events.length; i++) {
         let event = req.body.entry[0].messaging[i];
         let sender = event.sender.id;
-        // check first hero name
+
         if (event.message && event.message.text) {
-          let text = event.message.text;
-          const processedText = _.toLower(_.trim(text));
+          const processedText = _.toLower(_.trim(event.message.text));
 
-          if (saidHello) {
-            const processedText = _.toLower(_.trim(text));
-
-            if (processedText.startsWith('cmd')) {
-              const availableCommands = _.keys(commandCenter);
-              const cmd = _.words(processedText)[1];
-              _.map(availableCommands, function (command) {
-                if (cmd == command) {
-                  commandCenter[`${command}`](sender);
-                  commandMode = command;
-                }
-              });
-            } else if (commandMode == 'find') {
-              movieNameRequest = processedText;
-
-              if (movieNameRequest) {
-                findMovie(sender, movieNameRequest);
-              }
-            } else if (!commandMode) {
-              sendTextMessage(sender, 'Operator 6O does not understand this command.');
+          if (cmdCenter.saidHello) {
+            if (processedText.startsWith(commands.triggerMark)) {
+              const command = cmdCenter.handleCommandRequest(processedText);
+              cmdCenter.executeCommand({sender, command});
             }
           } else {
             sayHello(sender);
@@ -119,39 +85,19 @@ app.post('/webhook/', function (req, res) {
 });
 
 function sayHello(sender) {
-  let messageData = {text: intro};
-  request({
-      url: 'https://graph.facebook.com/v2.8/me/messages',
-      qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
-      method: 'POST',
-      json: {
-          recipient: {id: sender},
-          message: messageData,
-      }
-  }).then(function (body) {
-    saidHello = true
-  }, function (err) {
-    console.log('error encountered', err);
-  });
-}
-
-function sendTextMessage(sender, text) {
-    let messageData = {text: text}
-    request({
-	    url: 'https://graph.facebook.com/v2.8/me/messages',
-	    qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
-	    method: 'POST',
-  		json: {
-  		  recipient: {id: sender},
-  			message: messageData,
-  		}
-	}, function(error, response, body) {
-		if (error) {
-		  console.log('Error sending messages: ', error)
-		} else if (response.body.error) {
-		  console.log('Error: ', response.body.error)
-	  }
+  const config = {
+    sender: sender,
+    message: dialog.intro
+  }
+  sendMessage(config).then(function (resp) {
+    cmdCenter.updateHello();
+    console.log('sending message for hello: ', resp);
+    return;
   })
+  .catch(function (err) {
+    console.log('error when saying hello: ', err);
+    somethingWentWrong(sender);
+  });
 }
 
 function sendHelp(sender) {
@@ -221,7 +167,7 @@ function findMovie(sender, name) {
               recipient: {id: sender},
               message: message,
           }
-      }, function(error, response, body) {
+      }, function (error, response, body) {
           if (error) {
               console.log('Error sending messages: ', error)
           } else if (response.body.error) {
@@ -240,7 +186,7 @@ function searchComingSoon(name) {
       listType: 'ComingSoon',
       area: areaCode.length == 4 ? areaCode : '1002'
     }
-  }).then(function(body) {
+  }).then(function (body) {
     const result = body;
     const resultJSON = xmlParser.toJson(result, {
       object: true
@@ -263,7 +209,7 @@ function searchNowTheaters(name) {
     qs: {
       area: areaCode.length == 4 ? areaCode : '1002',
     }
-  }).then(function(body) {
+  }).then(function (body) {
     const result = body;
     const resultJSON = xmlParser.toJson(result, {
       object: true
@@ -279,7 +225,7 @@ function searchNowTheaters(name) {
 
 function browseMovie(sender) {
   resultEvent = [];
-  let resultPromise = searchNowTheaters('')
+  return searchNowTheaters('')
     .then(searchComingSoon(''))
     .catch(function (error) {
       console.log('promise error: ', error);
@@ -313,7 +259,7 @@ function browseMovie(sender) {
               recipient: {id: sender},
               message: message,
           }
-      }, function(error, response, body) {
+      }, function (error, response, body) {
           if (error) {
               console.log('Error sending messages: ', error)
           } else if (response.body.error) {
@@ -355,7 +301,11 @@ function sendDetail(sender) {
   }
 }
 
-// Spin up the servurrr!
-app.listen(app.get('port'), function() {
+function _getPhraseAfterTheSpace(sentence) {
+  const breakpoint = sentence.indexOf(' ');
+  return sentence.substring(breakpoint + 1);
+}
+
+app.listen(app.get('port'), function () {
   console.log('running on port', app.get('port'));
 });
