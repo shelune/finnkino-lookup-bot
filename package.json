@@ -7,15 +7,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "lodash": "^4.17.2",
     "moment": "^2.18.1",
+    "node-env-file": "^0.1.8",
     "qs": "^6.3.0",
     "request": "^2.78.0",
     "request-promise": "^4.1.1",
