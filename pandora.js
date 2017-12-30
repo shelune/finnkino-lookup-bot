@@ -67,7 +67,15 @@ let executioner = {
         return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
       });
     }).then(function (currentEvents) {
-      console.log('using search phrase _', name, '_ . Got: ', currentEvents);
+      return getFutureEvents({ areaCode: cmdCenter.areaCode }).then(function (futureResp) {
+        const events = xmlParser.toJson(futureResp, { object: true }).Events.Event;
+        return _.concat(currentEvents, _.filter(events, function (event) {
+          return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
+        }));
+      });
+    }).then(function (filtered) {
+      const uniqResult = _.uniqBy(filtered, 'ID');
+      console.log('using search phrase _', name, '_ . Got:', uniqResult.length, ' with content:', uniqResult);
     });
     /*
     const futureFiltered = currentFiltered.then(function () {
@@ -88,6 +96,9 @@ let cmdCenter = {
   pageCount: 0,
   titleCart: [],
   areaCode: theaterIds.helsinki,
+  _loadTitleCart: function (items) {
+    this.titleCart = items;
+  },
   updateHello: function () {
     this.saidHello = true;
   },
@@ -112,12 +123,6 @@ let cmdCenter = {
   extractParams: function (input) {
     return _.join(_.drop(_.words(input)), ' ');
   },
-  _loadTitleCart: function (items) {
-    this.titleCart = items;
-  },
-  advanceCartPos: function () {
-    this.currentCartPos += 1;
-  },
   updateCart: function (resp) {
     if (resp) {
       const events = xmlParser.toJson(resp, { object: true }).Events.Event;
@@ -135,7 +140,10 @@ let cmdCenter = {
   },
   getCartPos: function () {
     return this.currentCartPos + 1;
-  }
+  },
+  advanceCartPos: function () {
+    this.currentCartPos += 1;
+  },
 }
 
 module.exports = {
