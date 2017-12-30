@@ -17,7 +17,7 @@ const areaCodes = {
   tampere: '1021'
 };
 
-const titleChunksPerMsg = 10;
+const titleChunksPerMsg = 12;
 
 module.exports = {
   dialog,

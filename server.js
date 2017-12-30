@@ -74,7 +74,8 @@ app.post('/webhook/', function (req, res) {
           if (cmdCenter.saidHello) {
             if (processedText.startsWith(commands.triggerMark)) {
               const command = cmdCenter.handleCommandRequest(processedText);
-              cmdCenter.executeCommand({sender, command});
+              const input = cmdCenter.extractParams(processedText);
+              cmdCenter.executeCommand({sender, command, input});
             }
           } else {
             sayHello(sender);
@@ -97,23 +98,6 @@ function sayHello(sender) {
   .catch(function (err) {
     console.log('error when saying hello: ', err);
     somethingWentWrong(sender);
-  });
-}
-
-function sendHelp(sender) {
-  let messageData = {text: commandBrowse};
-  request({
-      url: 'https://graph.facebook.com/v2.8/me/messages',
-      qs: {access_token: process.env.PAGE_ACCESS_TOKEN},
-      method: 'POST',
-      json: {
-          recipient: {id: sender},
-          message: messageData,
-      }
-  }).then(function (body) {
-    sendTextMessage(sender, commandFind);
-  }, function (err) {
-    console.log('error encountered', err);
   });
 }
 
@@ -175,52 +159,6 @@ function findMovie(sender, name) {
           }
       });
     })
-}
-
-function searchComingSoon(name) {
-  return request.get({
-    uri: urlEvents,
-    baseUrl: baseUrl,
-    json: true,
-    qs: {
-      listType: 'ComingSoon',
-      area: areaCode.length == 4 ? areaCode : '1002'
-    }
-  }).then(function (body) {
-    const result = body;
-    const resultJSON = xmlParser.toJson(result, {
-      object: true
-    });
-    const events = resultJSON.Events.Event;
-    const matchedEvents = _.filter(events, function (event) {
-      return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
-    });
-    console.log('coming soon filtered: ', matchedEvents);
-
-    resultEvent = _.concat(resultEvent, matchedEvents);
-  })
-}
-
-function searchNowTheaters(name) {
-  return request.get({
-    uri: urlEvents,
-    baseUrl: baseUrl,
-    json: true,
-    qs: {
-      area: areaCode.length == 4 ? areaCode : '1002',
-    }
-  }).then(function (body) {
-    const result = body;
-    const resultJSON = xmlParser.toJson(result, {
-      object: true
-    });
-    const events = resultJSON.Events.Event;
-    const matchedEvents = _.filter(events, function (event) {
-      return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
-    });
-
-    resultEvent = _.concat(resultEvent, matchedEvents);
-  })
 }
 
 function browseMovie(sender) {

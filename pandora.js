@@ -2,7 +2,12 @@ const _ = require('lodash');
 const xmlParser = require('xml2json');
 
 const {commands, dialog, titleChunksPerMsg} = require('./const');
-const {sendMessage, somethingWentWrong, getCurrentEvents} = require('./api');
+const {
+  sendMessage, 
+  somethingWentWrong, 
+  getCurrentEvents,
+  getFutureEvents
+} = require('./api');
 
 const theaterIds = {
   'helsinki': '1002',
@@ -24,27 +29,63 @@ let executioner = {
   },
   current: function (sender) {
     getCurrentEvents({areaCode: cmdCenter.areaCode}).then(function (resp) {
-      const events = xmlParser.toJson(resp, { object: true }).Events.Event;
-      let results = _.map(events, function (event) {
-        return `${event.Title || event.OriginalTitle}`;
-      });
-      cmdCenter.loadTitleCart(_.chunk(results, titleChunksPerMsg));
-      const message = _.join(cmdCenter.titleCart[cmdCenter.currentCartPos], '\n');
-      sendMessage({ sender, message: `Tadaa! Here's the list of events available for booking at the moment: \n\n${message} \n\nPage: *${cmdCenter.currentCartPos + 1}/${Math.ceil(_.flatten(cmdCenter.titleCart).length / titleChunksPerMsg)}* (\`!next\` to advance.)` });
+      cmdCenter.updateCart(resp);
+      const message = cmdCenter.getCartChunk();
+      sendMessage({ sender, message: `Tadaa! Here's the list of events available for booking at the moment: \n\n${message} \n\nPage: *${cmdCenter.getCartPos()}/${cmdCenter.pageCount}* (\`!next\` to advance.)` });
     }).catch(function (err) {
       somethingWentWrong({sender});
-    })
+    });
+  },
+  future: function (sender) {
+    getFutureEvents({areaCode: cmdCenter.areaCode}).then(function(resp) {
+      cmdCenter.updateCart(resp);
+      const message = cmdCenter.getCartChunk();
+      sendMessage({ sender, message: `Tadaa! Here's the list of events available in the next *3 weeks*: \n\n${message} \n\nPage: *${cmdCenter.getCartPos()}/${cmdCenter.pageCount}* (\`!next\` to advance.)` });
+    }).catch(function (err) {
+      somethingWentWrong({sender});
+    });
   },
   next: function (sender) {
-    cmdCenter.advanceCartPos();
-    const message = _.join(cmdCenter.titleCart[cmdCenter.currentCartPos], '\n');
-    sendMessage({ sender, message: `Tadaa! Here's the list of events available for booking at the moment: \n\n${message} \n\nPage: *${cmdCenter.currentCartPos + 1}/${Math.ceil(_.flatten(cmdCenter.titleCart).length / titleChunksPerMsg)}* (\`!next\` to advance.)` });
+    if (cmdCenter.titleCart.length < 1) {
+      sendMessage({sender, message: 'I cannot advance in an empty list. Try `!current` or `!future` first?'});
+      return;
+    }
+
+    if (cmdCenter.getCartPos() < Math.ceil(_.flatten(cmdCenter.titleCart).length / titleChunksPerMsg)) {
+      cmdCenter.advanceCartPos();
+      const message = cmdCenter.getCartChunk();
+      sendMessage({ sender, message: `Tadaa! Here's the list of events available for booking at the moment: \n\n${message} \n\nPage: *${cmdCenter.getCartPos()}/${cmdCenter.pageCount}* (\`!next\` to advance.)` });
+    } else {
+      const message = 'Reached the end of the list';
+      sendMessage({sender, message});
+    }
+  },
+  find: function (sender, name) {
+    getCurrentEvents({ areaCode: cmdCenter.areaCode }).then(function (resp) {
+      const events = xmlParser.toJson(resp, { object: true }).Events.Event;
+      return _.filter(events, function (event) {
+        return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
+      });
+    }).then(function (currentEvents) {
+      console.log('using search phrase _', name, '_ . Got: ', currentEvents);
+    });
+    /*
+    const futureFiltered = currentFiltered.then(function () {
+      return getFutureEvents({ areaCode: cmdCenter.areaCode }).then(function (futureResp) {
+        const events = xmlParser.toJson(futureResp, { object: true }).Events.Event;
+        return _.filter(events, function (event) {
+          return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
+        });
+      });
+    });  
+    */
   }
 }
 
 let cmdCenter = {
   saidHello: true,
   currentCartPos: 0,
+  pageCount: 0,
   titleCart: [],
   areaCode: theaterIds.helsinki,
   updateHello: function () {
@@ -57,23 +98,43 @@ let cmdCenter = {
       if (_.indexOf(commands.availableCmds, command) != -1) {
         return command;
       }
-      return '';
     }
     return '';
   },
-  executeCommand: function ({sender, command}) {
-    console.log('execute command: ', command,' with sender: ', sender);
+  executeCommand: function ({sender, command, input}) {
     if (command) {
-      executioner[command](sender);
+      executioner[command](sender, input);
+      console.log('execute command _', command, '_ with sender id: ', sender);
     } else {
-      sendMessage({ sender, message: 'This command is not valid' });
+      sendMessage({ sender, message: 'Operator 6O does not understand this command. '});
     }
   },
-  loadTitleCart: function (items) {
-    this.titleCart = this.titleCart.concat(items);
+  extractParams: function (input) {
+    return _.join(_.drop(_.words(input)), ' ');
+  },
+  _loadTitleCart: function (items) {
+    this.titleCart = items;
   },
   advanceCartPos: function () {
     this.currentCartPos += 1;
+  },
+  updateCart: function (resp) {
+    if (resp) {
+      const events = xmlParser.toJson(resp, { object: true }).Events.Event;
+      let results = _.map(events, function (event, index) {
+        return `${index + 1}. ${event.Title || event.OriginalTitle}`;
+      });
+      this.pageCount = 0;
+      this._loadTitleCart(_.chunk(results, titleChunksPerMsg));
+      this.pageCount = Math.ceil(_.flatten(cmdCenter.titleCart).length / titleChunksPerMsg);
+    }
+    return;
+  },
+  getCartChunk: function () {
+    return _.join(cmdCenter.titleCart[cmdCenter.currentCartPos], '\n');
+  },
+  getCartPos: function () {
+    return this.currentCartPos + 1;
   }
 }
 

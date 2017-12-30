@@ -49,8 +49,23 @@ function getCurrentEvents(data) {
   return request(config);
 }
 
+function getFutureEvents(data) {
+  const config = {
+    uri: urlEvents,
+    baseUrl: baseUrl,
+    json: true,
+    qs: {
+      listType: 'ComingSoon',
+      area: data.areaCode ? data.areaCode : areaCodes.helsinki
+    }
+  }
+
+  return request(config);
+}
+
 module.exports = {
   sendMessage,
   somethingWentWrong,
-  getCurrentEvents
+  getCurrentEvents,
+  getFutureEvents
 }
