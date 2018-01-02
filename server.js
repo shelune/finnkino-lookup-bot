@@ -7,8 +7,10 @@ const bodyParser = require('body-parser');
 const xmlParser = require('xml2json');
 const request = require('request-promise');
 const app = express();
+/*
 const env = require('node-env-file');
 env(__dirname + '/.env');
+*/
 
 const {dialog, commands} = require('./const');
 const {sendMessage, somethingWentWrong} = require('./api');
