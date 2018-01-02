@@ -22,6 +22,19 @@ function sendMessage(data) {
   return request(config);
 }
 
+function sendGenericMessage(data) {
+  const config = {
+    url: 'https://graph.facebook.com/v2.8/me/messages',
+    qs: { access_token: process.env.PAGE_ACCESS_TOKEN },
+    method: 'POST',
+    json: {
+      recipient: { id: data.sender },
+      message: data.message
+    },
+  };
+  return request(config);
+}
+
 function somethingWentWrong(data) {
   const config = {
     url: 'https://graph.facebook.com/v2.8/me/messages',
@@ -65,6 +78,7 @@ function getFutureEvents(data) {
 
 module.exports = {
   sendMessage,
+  sendGenericMessage,
   somethingWentWrong,
   getCurrentEvents,
   getFutureEvents
