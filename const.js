@@ -1,8 +1,8 @@
 const dialog = {
-  intro: 'Hello! Operator 6O wish you a good day. Here you can check if your favorite upcoming movie is out for schedule at Finnkino or not. Type "!help" for the command you can issue!',
-  find: `*!find [insert movie name]*: I'll hopefully return the movie you want with its event link & date.`,
-  current: `*!current*: I'll return a list of currently showing movies at Finnkino.`,
-  future: `*!future*: I'll introduce a list of events available for you within the near future (approx. 3 weeks)`,
+  intro: 'Hello! Operator 6O wish you a good day. Here you can check your movie is out for schedule at Finnkino or not. Type \`!help\` for the command you can issue!',
+  find: `\`!find [insert movie name]\`: I'll hopefully return the movie you want with its event link & date.`,
+  current: `\`!current\`: I'll return a list of currently showing movies at Finnkino.`,
+  future: `\`!future\`: I'll introduce a list of events available for you within the near future (approx. 3 weeks)`,
 };
 
 const commands = {

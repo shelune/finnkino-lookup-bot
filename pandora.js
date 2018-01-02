@@ -128,7 +128,7 @@ let executioner = {
 };
 
 let cmdCenter = {
-  saidHello: true,
+  saidHello: false,
   currentCartPos: 0,
   pageCount: 0,
   titleCart: [],
@@ -136,8 +136,14 @@ let cmdCenter = {
   _loadTitleCart: function (items) {
     this.titleCart = items;
   },
-  updateHello: function () {
+  _updateHello: function () {
     this.saidHello = true;
+  },
+  sayHello: function (sender) {
+    sendMessage({sender, message: dialog.intro}).then(function (resp) {
+      cmdCenter._updateHello();
+      return;
+    });
   },
   handleCommandRequest: function (input) {
     if (input.startsWith(commands.triggerMark)) {
