@@ -145,6 +145,10 @@ let cmdCenter = {
       return;
     });
   },
+  extractParams: function (input) {
+    const firstWordPos = input.indexOf(' ') + 1;
+    return input.substring(firstWordPos);
+  },
   handleCommandRequest: function (input) {
     if (input.startsWith(commands.triggerMark)) {
       const commandWord = _.words(input)[0];
@@ -162,10 +166,6 @@ let cmdCenter = {
     } else {
       sendMessage({ sender, message: 'Operator 6O does not understand this command. '});
     }
-  },
-  extractParams: function (input) {
-    const firstWordPos = input.indexOf(' ') + 1;
-    return input.substring(firstWordPos);
   },
   updateCart: function (resp) {
     if (resp) {
