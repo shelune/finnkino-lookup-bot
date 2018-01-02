@@ -1,9 +1,11 @@
 const _ = require('lodash');
 const xmlParser = require('xml2json');
+const moment = require('moment');
 
 const {commands, dialog, titleChunksPerMsg} = require('./const');
 const {
-  sendMessage, 
+  sendMessage,
+  sendGenericMessage,
   somethingWentWrong, 
   getCurrentEvents,
   getFutureEvents
@@ -14,6 +16,17 @@ const theaterIds = {
   'espoo': '1012',
   'vantaa': '1019'
 }
+
+function getSamples(events) {
+  const randomEvents = _.slice(_.shuffle(events), 0, 3);
+  return _.join(_.map(randomEvents, function (event) {
+    return event.Title;
+  }), ', ');
+};
+
+function getEventVersion(title) {
+  return title.match(/\(([^)]+)\)/) ? title.match(/\(([^)]+)\)/)[1] : title;
+};
 
 let executioner = {
   help: function (sender) {
@@ -61,6 +74,11 @@ let executioner = {
     }
   },
   find: function (sender, name) {
+    if (!name) {
+      sendMessage({ sender, message: `Operator 6O doesn't see a movie name in your query.` });
+      return;
+    }
+
     getCurrentEvents({ areaCode: cmdCenter.areaCode }).then(function (resp) {
       const events = xmlParser.toJson(resp, { object: true }).Events.Event;
       return _.filter(events, function (event) {
@@ -69,26 +87,45 @@ let executioner = {
     }).then(function (currentEvents) {
       return getFutureEvents({ areaCode: cmdCenter.areaCode }).then(function (futureResp) {
         const events = xmlParser.toJson(futureResp, { object: true }).Events.Event;
-        return _.concat(currentEvents, _.filter(events, function (event) {
+        return _.uniqBy(_.concat(currentEvents, _.filter(events, function (event) {
           return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
-        }));
+        })), 'ID'); 
       });
-    }).then(function (filtered) {
-      const uniqResult = _.uniqBy(filtered, 'ID');
-      console.log('using search phrase _', name, '_ . Got:', uniqResult.length, ' with content:', uniqResult);
+    }).then(function (results) {
+      if (results.length < 1) {
+        sendMessage({ sender, message: `Operator 6O cannot find any event with *${name}*. Try another one then!` });
+        return;
+      }
+
+      if (results.length > 4) {
+        sendMessage({ sender, message: `This search query returns too many hits. Operator 6O recommends you narrow it down a little bit. For example in your case, *${getSamples(results)}* etc.?` });
+        return;
+      }
+      
+      // console.log('using search phrase _', name, '_ . Got:', uniqResult.length, 'result with content:', uniqResult);
+      const sampleEvent = results[0];
+      const sampleReply = `Are you searching for *'${sampleEvent.OriginalTitle}'*? \nIt's released on *${moment(sampleEvent.dtLocalRelease).format('DD/MM/YYYY')}*.\n${sampleEvent.Videos.EventVideo ? 'You can watch the trailer at https://youtube.com/watch?v=' + sampleEvent.Videos.EventVideo.Location + '. ' : ''}If there're multiple versions, they should all be listed below. Check it out!`;
+
+      const buttonUrls = _.map(results, function (event) {
+        return { 'type': 'web_url', 'url': event.EventURL, 'title': getEventVersion(event.OriginalTitle) };
+      });
+
+      const message = {
+        'attachment': {
+          'type': 'template',
+          'payload': {
+            'template_type': 'button',
+            'text': sampleReply,
+            'buttons': buttonUrls
+          }
+        }
+      };
+
+      sendGenericMessage({ sender, message });
+      return;
     });
-    /*
-    const futureFiltered = currentFiltered.then(function () {
-      return getFutureEvents({ areaCode: cmdCenter.areaCode }).then(function (futureResp) {
-        const events = xmlParser.toJson(futureResp, { object: true }).Events.Event;
-        return _.filter(events, function (event) {
-          return _.includes(_.toLower(event.Title), name) || _.includes(_.toLower(event.OriginalTitle), name);
-        });
-      });
-    });  
-    */
   }
-}
+};
 
 let cmdCenter = {
   saidHello: true,
@@ -121,7 +158,8 @@ let cmdCenter = {
     }
   },
   extractParams: function (input) {
-    return _.join(_.drop(_.words(input)), ' ');
+    const firstWordPos = input.indexOf(' ') + 1;
+    return input.substring(firstWordPos);
   },
   updateCart: function (resp) {
     if (resp) {
@@ -129,7 +167,7 @@ let cmdCenter = {
       let results = _.map(events, function (event, index) {
         return `${index + 1}. ${event.Title || event.OriginalTitle}`;
       });
-      this.pageCount = 0;
+      this.currentCartPos = 0;
       this._loadTitleCart(_.chunk(results, titleChunksPerMsg));
       this.pageCount = Math.ceil(_.flatten(cmdCenter.titleCart).length / titleChunksPerMsg);
     }

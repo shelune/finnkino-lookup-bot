@@ -2,7 +2,6 @@
 
 const qs = require('qs');
 const _ = require('lodash');
-const moment = require('moment');
 const express = require('express');
 const bodyParser = require('body-parser');
 const xmlParser = require('xml2json');
